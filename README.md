@@ -21,16 +21,19 @@ Here are some ideas to get you started:
 -->
 
 <p align="center">
+    <a href="https://www.linkedin.com/in/jmrplens/">
+        <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/linkedin.svg" alt="LinkedIn" height="40" />
+    </a>
     <a href="mailto:joreple@upv.es">
         <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/mailicon.svg" alt="E-Mail" height="40" />
     </a>
-    <a href="https://www.linkedin.com/in/jmrplens/">
-        <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/linkedin.svg" alt="LinkedIn" height="40" />
+    <a href="https://t.me/jmrplens">
+        <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/telegra.svg" alt="Telegram" height="40"/>
     </a>
     <a href="https://twitter.com/jmrplens">
         <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/twitter.svg" alt="Twitter" height="40" />
     </a>
-    <a href="https://t.me/jmrplens">
-        <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/telegra.svg" alt="Telegram" height="40"/>
+    <a href="https://www.paypal.com/donate?hosted_button_id=BLP3R6VGYJB4Q">
+        <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/paypal.svg" alt="Donation" height="40" />
     </a>
 </p>
