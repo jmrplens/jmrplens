@@ -15,17 +15,17 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-<p align="left">
+<p align="center">
   <a href="mailto:joreple@upv.es">
-    <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/mail.svg" alt="npm" height="45" />
+    <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/mailicon.svg" alt="npm" height="50" />
   </a>
   <a href="https://www.linkedin.com/in/jmrplens/">
-    <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/linkedin.svg" alt="LinkedIn" height="45" />
+    <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/linkedin.svg" alt="LinkedIn" height="50" />
   </a>
   <a href="https://twitter.com/jmrplens">
-    <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/twitter.svg" alt="Buy me a coffee" height="45" />
+    <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/twitter.svg" alt="Buy me a coffee" height="50" />
   </a>
   <a href="https://t.me/jmrplens">
-    <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/telegra.svg" alt="Telegram" height="45"/>
+    <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/telegra.svg" alt="Telegram" height="50"/>
   </a>
 </p>
