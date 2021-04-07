@@ -2,7 +2,9 @@
 
 
 <p align="center">
-  <b><a href="https://www.youtube.com/watch?v=bxqLsrlakK8">Hi there 👋</a></b>
+  <a href="https://www.youtube.com/watch?v=bxqLsrlakK8">
+    <img src="https://img.shields.io/badge/%F0%9F%91%8B-HI%20THERE-orange?style=for-the-badge&labelColor=666666" height="50"/>
+    </a>
 </p>
 
 
