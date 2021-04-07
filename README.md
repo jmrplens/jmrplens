@@ -29,6 +29,6 @@ Here are some ideas to get you started:
     <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/twitter.svg" alt="Buy me a coffee" height="45" />
   </a>
   <a href="https://t.me/jmrplens">
-    <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/telegram.svg" alt="Telegram" height="45"/>
+    <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/telegra.svg" alt="Telegram" height="45"/>
   </a>
 </p>
