@@ -20,7 +20,7 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 <p align="center">
-<img alt="jmrplens" src="https://github-readme-stats.vercel.app/api/?username=jmrplens&amp;theme=default&amp;show_icons=true">
+<img alt="jmrplens" src="https://github-readme-stats.vercel.app/api/?username=jmrplens&bg_color=0,666666,fe7d37&title_color=fff&text_color=fff&show_icons=false&hide=commits,issues">
 </p>
 
 <p align="center">
