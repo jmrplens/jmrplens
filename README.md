@@ -19,6 +19,9 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+<p align="center">
+<img alt="jmrplens" src="https://github-readme-stats.vercel.app/api/?username=jmrplens&amp;theme=default&amp;show_icons=true">
+</p>
 
 <p align="center">
     <a href="https://www.linkedin.com/in/jmrplens/">
@@ -27,13 +30,7 @@ Here are some ideas to get you started:
     <a href="mailto:jmrplens@gmail.com">
         <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/mailicon.svg" alt="E-Mail" height="40" />
     </a>
-    <a href="https://t.me/jmrplens">
-        <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/telegra.svg" alt="Telegram" height="40"/>
-    </a>
     <a href="https://twitter.com/jmrplens">
         <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/twitter.svg" alt="Twitter" height="40" />
     </a>
 </p>
-
-![jmrplens Stats](https://github-readme-stats.vercel.app/api/?username=jmrplens&amp;theme=default&amp;show_icons=true#gh-light-mode-only)
-![jmrplens Stats](https://github-readme-stats.vercel.app/api/?username=jmrplens&amp;theme=dark&amp;show_icons=true#gh-dark-mode-only)
