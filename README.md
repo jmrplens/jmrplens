@@ -24,7 +24,7 @@ Here are some ideas to get you started:
     <a href="https://www.linkedin.com/in/jmrplens/">
         <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/linkedin.svg" alt="LinkedIn" height="40" />
     </a>
-    <a href="mailto:joreple@upv.es">
+    <a href="mailto:jmrplens@gmail.com">
         <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/mailicon.svg" alt="E-Mail" height="40" />
     </a>
     <a href="https://t.me/jmrplens">
@@ -33,7 +33,7 @@ Here are some ideas to get you started:
     <a href="https://twitter.com/jmrplens">
         <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/twitter.svg" alt="Twitter" height="40" />
     </a>
-    <a href="https://www.paypal.com/donate?hosted_button_id=BLP3R6VGYJB4Q">
-        <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/paypal.svg" alt="Donation" height="40" />
-    </a>
 </p>
+
+![jmrplens Stats](https://github-readme-stats.vercel.app/api/?username=jmrplens&amp;theme=default&amp;show_icons=true#gh-light-mode-only)
+![jmrplens Stats](https://github-readme-stats.vercel.app/api/?username=jmrplens&amp;theme=dark&amp;show_icons=true#gh-dark-mode-only)
