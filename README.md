@@ -35,7 +35,7 @@ Here are some ideas to get you started:
     <a href="https://twitter.com/jmrplens">
         <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/twitter.svg" alt="Twitter" height="40" />
     </a>
-    <a rel="me" href="https://mastodon.lol/@jmrplens" title="Mastodon">
+    <a rel="me" href="https://red.niboe.info/@jmrplens" title="Mastodon">
         <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/mastodon.svg" alt="Mastodon" height="40" />
     </a>
 </p>
