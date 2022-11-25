@@ -39,6 +39,6 @@ Here are some ideas to get you started:
         <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/mastodon.svg" alt="Mastodon" height="40" />
     </a>
     <a rel="me" href="https://pixel.nobigtech.es/jmrplens" title="Pixelfed">
-        <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/pixelfed.svg" alt="Pixelfed" height="40" />
+        <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/pixelfedr.svg" alt="Pixelfed" height="40" />
     </a>
 </p>
