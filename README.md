@@ -21,10 +21,10 @@ Here are some ideas to get you started:
 -->
 <p align="center">
 <a href="https://www.youtube.com/watch?v=bxqLsrlakK8">
-<img alt="jmrplens" src="https://github-readme-stats.vercel.app/api/?username=jmrplens&bg_color=0,666666,fe7d37&title_color=fff&text_color=fff&show_icons=false&hide=commits,issues">
+    <img alt="jmrplens" src="https://github-readme-stats.vercel.app/api/?username=jmrplens&bg_color=0,666666,fe7d37&title_color=fff&text_color=fff&show_icons=false&hide=commits,issues">
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=jmrplens&theme=dark" height="150px" alt="jmrplens" />
 </a>
 </p>
-
 <p align="center">
     <a href="https://www.linkedin.com/in/jmrplens/">
         <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/linkedin.svg" alt="LinkedIn" height="40" />
@@ -37,5 +37,8 @@ Here are some ideas to get you started:
     </a> -->
     <a rel="me" href="https://red.niboe.info/@jmrplens" title="Mastodon">
         <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/mastodon.svg" alt="Mastodon" height="40" />
+    </a>
+    <a rel="me" href="https://pixel.nobigtech.es/jmrplens" title="Pixelfed">
+        <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/pixelfed.svg" alt="Pixelfed" height="40" />
     </a>
 </p>
