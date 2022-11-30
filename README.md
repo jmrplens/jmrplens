@@ -38,7 +38,7 @@ Here are some ideas to get you started:
     <a rel="me" href="https://red.niboe.info/@jmrplens" title="Mastodon">
         <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/mastodon.svg" alt="Mastodon" height="40" />
     </a>
-    <a rel="me" href="https://pixel.nobigtech.es/jmrplens" title="Pixelfed">
+    <a rel="me" href="https://pixelfed.social/jmrplens" title="Pixelfed">
         <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/pixelfedr.svg" alt="Pixelfed" height="40" />
     </a>
 </p>
