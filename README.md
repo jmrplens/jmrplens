@@ -21,8 +21,8 @@ Here are some ideas to get you started:
 -->
 <p align="center">
 <a href="https://www.youtube.com/watch?v=bxqLsrlakK8">
-    <img alt="jmrplens" src="https://github-readme-stats.vercel.app/api/?username=jmrplens&bg_color=0,666666,fe7d37&title_color=fff&text_color=fff&show_icons=false&hide=commits,issues">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=jmrplens&theme=dark" height="150px" alt="jmrplens" />
+    <img alt="jmrplens" src="https://github.com/jmrplens/jmrplens/blob/main/generated/overview.svg">
+    <img src="https://github.com/jmrplens/jmrplens/blob/main/generated/languages.svg" alt="jmrplens" />
 </a>
 </p>
 <p align="center">
