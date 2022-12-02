@@ -21,8 +21,14 @@ Here are some ideas to get you started:
 -->
 <p align="center">
 <a href="https://www.youtube.com/watch?v=bxqLsrlakK8">
-    <img alt="jmrplens" src="https://github.com/jmrplens/jmrplens/blob/main/generated/overview.svg">
-    <img src="https://github.com/jmrplens/jmrplens/blob/main/generated/languages.svg" alt="jmrplens" />
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jmrplens/jmrplens/main/generated/overview.svg#gh-dark-mode-only">
+        <img src="https://raw.githubusercontent.com/jmrplens/jmrplens/main/generated/overview.svg#gh-light-mode-only">
+    </picture>
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jmrplens/jmrplens/main/generated/languages.svg#gh-dark-mode-only">
+        <img src="https://raw.githubusercontent.com/jmrplens/jmrplens/main/generated/languages.svg#gh-light-mode-only">
+    </picture>
 </a>
 </p>
 <p align="center">
