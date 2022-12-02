@@ -47,4 +47,11 @@ Here are some ideas to get you started:
     <a rel="me" href="https://pixelfed.social/jmrplens" title="Pixelfed">
         <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/pixelfedr.svg" alt="Pixelfed" height="40" />
     </a>
+    <br><br>
+    <a rel="me" href="https://liberapay.com/jmrplens/donate" title="liberapay">
+        <img src="https://liberapay.com/assets/widgets/donate.svg" alt="Pixelfed" height="20" />
+    </a>
+    <a rel="me" href="https://ko-fi.com/X8X147IR3" title="ko-fi">
+        <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Pixelfed" height="20" />
+    </a>
 </p>
