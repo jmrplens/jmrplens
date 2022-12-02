@@ -5,7 +5,7 @@ name: Generate Stats Images
 # Controls when the action will run. Triggers the workflow on push events
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   schedule:
     - cron: "5 0 * * *"
   workflow_dispatch:
@@ -60,8 +60,8 @@ jobs:
     # Commits all changed files to the repository
     - name: Commit to the repo
       run: |
-        git config --global user.name "jstrieb/github-stats"
-        git config --global user.email "github-stats[bot]@jstrieb.github.io"
+        git config --global user.name "jmrplens/jmrplens"
+        git config --global user.email "github-stats[bot]@jmrplens.github.io"
         git add .
         # "echo" returns true so the build succeeds, even if no changed files
         git commit -m 'Update generated files' || echo
