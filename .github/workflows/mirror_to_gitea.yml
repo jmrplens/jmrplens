@@ -3,12 +3,12 @@ name: " ⏳  Gitea Mirror Setup"
 on:
   workflow_dispatch:
  
-  schedule:
-    - cron: 0 0 * * *
+  #schedule:
+   # - cron: 0 0 * * *
   
-  push:
-    branches:
-      - main
+  #push:
+   # branches:
+    #  - main
 
 jobs:
   build:
