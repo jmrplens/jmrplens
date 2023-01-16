@@ -54,7 +54,8 @@ jobs:
         git commit -m 'Update generated files' || true
         git push
       
-    - name: Mirror to gitlab                             # <-- must use actions/checkout before mirroring!
+    - name: Mirror to gitlab 
+      run:                            # <-- must use actions/checkout before mirroring!
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0
