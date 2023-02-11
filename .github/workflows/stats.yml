@@ -58,11 +58,10 @@ jobs:
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0
-    - uses: yesolutions/mirror-action@master
+    - uses: pixta-dev/repository-mirroring-action@v1
       with:
-        REMOTE:
-          git@git.jmrp.io:jmrplens/jmrplens.git
-        GIT_SSH_PRIVATE_KEY:                              # <-- use 'secrets' to pass credential information.
+        target_repo_url:
+          git@git.jmrp.io:27/${{ github.repository }}.git
+        ssh_private_key:                              # <-- use 'secrets' to pass credential information.
           ${{ secrets.GITLAB_SSH_PRIVATE_KEY }}
-        GIT_SSH_NO_VERIFY_HOST: "true"
 
