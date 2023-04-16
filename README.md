@@ -22,34 +22,34 @@ Here are some ideas to get you started:
 <p align="center">
 <a href="https://www.youtube.com/watch?v=bxqLsrlakK8">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jmrplens/jmrplens/main/generated/overview.svg#gh-dark-mode-only">
-        <img src="https://raw.githubusercontent.com/jmrplens/jmrplens/main/generated/overview.svg#gh-light-mode-only">
+        <source media="(prefers-color-scheme: dark)" srcset="generated/overview.svg#gh-dark-mode-only">
+        <img src="generated/overview.svg#gh-light-mode-only">
     </picture>
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jmrplens/jmrplens/main/generated/languages.svg#gh-dark-mode-only">
-        <img src="https://raw.githubusercontent.com/jmrplens/jmrplens/main/generated/languages.svg#gh-light-mode-only">
+        <source media="(prefers-color-scheme: dark)" srcset="generated/languages.svg#gh-dark-mode-only">
+        <img src="generated/languages.svg#gh-light-mode-only">
     </picture>
 </a>
 </p>
 <p align="center">
     <a href="https://www.linkedin.com/in/jmrplens/">
-        <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/linkedin.svg" alt="LinkedIn" height="40" />
+        <img src="icons/linkedin.svg" alt="LinkedIn" height="40" />
     </a>
     <a href="mailto:jmrplens@gmail.com">
-        <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/mailicon.svg" alt="E-Mail" height="40" />
+        <img src="icons/mailicon.svg" alt="E-Mail" height="40" />
     </a>
    <!-- <a href="https://twitter.com/jmrplens">
-        <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/twitter.svg" alt="Twitter" height="40" />
+        <img src="icons/twitter.svg" alt="Twitter" height="40" />
     </a> -->
-    <a rel="me" href="https://red.niboe.info/@jmrplens" title="Mastodon">
-        <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/mastodon.svg" alt="Mastodon" height="40" />
+    <a rel="me" href="https://mstdn.jmrp.io/@jmrplens" title="Mastodon">
+        <img src="icons/mastodon.svg" alt="Mastodon" height="40" />
     </a>
-    <a rel="me" href="https://pixelfed.social/jmrplens" title="Pixelfed">
-        <img src="https://github.com/jmrplens/jmrplens/blob/main/icons/pixelfedr.svg" alt="Pixelfed" height="40" />
+    <a rel="me" href="https://pixel.jmrp.io/jmrplens" title="Pixelfed">
+        <img src="icons/pixelfedr.svg" alt="Pixelfed" height="40" />
     </a>
     <br><br>
     <a rel="me" href="https://liberapay.com/jmrplens/donate" title="liberapay">
-        <img src="https://liberapay.com/assets/widgets/donate.svg" alt="Pixelfed" height="25" />
+        <img src="https://liberapay.com/assets/widgets/donate.svg" alt="liberapay" height="25" />
     </a>
     <a rel="me" href="https://ko-fi.com/X8X147IR3" title="ko-fi">
         <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Pixelfed" height="25" />
