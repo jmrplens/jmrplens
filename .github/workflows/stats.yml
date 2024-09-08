@@ -3,8 +3,8 @@ name: Generate Stats Images
 on:
   push:
     branches: [ main ]
-  schedule:
-    - cron: "0 */6 * * *"
+  #schedule:
+    #- cron: "0 */6 * * *"
   workflow_dispatch:
 
 permissions:
