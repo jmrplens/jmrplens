@@ -44,9 +44,9 @@ Here are some ideas to get you started:
     <a rel="me" href="https://mstdn.jmrp.io/@jmrplens" title="Mastodon">
         <img src="icons/mastodon.svg" alt="Mastodon" height="40" />
     </a>
-    <a rel="me" href="https://pixel.jmrp.io/jmrplens" title="Pixelfed">
+    <!--<a rel="me" href="https://pixel.jmrp.io/jmrplens" title="Pixelfed">
         <img src="icons/pixelfedr.svg" alt="Pixelfed" height="40" />
-    </a>
+    </a> -->
     <br><br>
     <a rel="me" href="https://liberapay.com/jmrplens/donate" title="liberapay">
         <img src="https://liberapay.com/assets/widgets/donate.svg" alt="liberapay" height="25" />
