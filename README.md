@@ -33,8 +33,7 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 ### Infrastructure & Services
 <p align="center">
   <a href="https://mikrotik.com/"><img src="assets/icons/tech/mikrotik.svg" width="48" height="48" alt="MikroTik"/></a>
-  <a href="https://matrix.org/"><img src="assets/icons/tech/matrix.svg" width="48" height="48" alt="Matrix"/></a>
-  <a href="https://element-hq.github.io/synapse/"><img src="assets/icons/tech/synapse.svg" width="48" height="48" alt="Matrix Synapse"/></a>
+  <a href="https://matrix.org/"><img src="assets/icons/tech/matrix.svg" width="48" height="48" alt="Matrix Synapse"/></a>
   <a href="https://joinmastodon.org/"><img src="assets/icons/tech/mastodon.svg" width="48" height="48" alt="Mastodon"/></a>
   <a href="https://www.home-assistant.io/"><img src="assets/icons/tech/homeassistant.svg" width="48" height="48" alt="Home Assistant"/></a>
   <a href="https://meshtastic.org/"><img src="assets/icons/tech/meshtastic.svg" width="48" height="48" alt="Meshtastic"/></a>

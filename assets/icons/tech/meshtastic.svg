@@ -1,22 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="meshtastic-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#67EA94;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#4CAF50;stop-opacity:1" />
-    </linearGradient>
-  </defs>
-  <rect width="48" height="48" rx="8" fill="url(#meshtastic-grad)"/>
-  <!-- Mesh network pattern -->
-  <circle cx="12" cy="12" r="2" fill="white" opacity="0.9"/>
-  <circle cx="36" cy="12" r="2" fill="white" opacity="0.9"/>
-  <circle cx="12" cy="36" r="2" fill="white" opacity="0.9"/>
-  <circle cx="36" cy="36" r="2" fill="white" opacity="0.9"/>
-  <circle cx="24" cy="24" r="3" fill="white"/>
-  <!-- Connection lines -->
-  <line x1="12" y1="12" x2="24" y2="24" stroke="white" stroke-width="1.5" opacity="0.7"/>
-  <line x1="36" y1="12" x2="24" y2="24" stroke="white" stroke-width="1.5" opacity="0.7"/>
-  <line x1="12" y1="36" x2="24" y2="24" stroke="white" stroke-width="1.5" opacity="0.7"/>
-  <line x1="36" y1="36" x2="24" y2="24" stroke="white" stroke-width="1.5" opacity="0.7"/>
-  <!-- Text -->
-  <text x="24" y="44" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle">MESH</text>
+  <rect width="48" height="48" rx="8" fill="#67EA94"/>
+  <!-- Official Meshtastic logo scaled and centered -->
+  <g transform="translate(4, 12) scale(0.4)">
+    <g transform="matrix(0.802386,0,0,0.460028,-421.748,-122.127)">
+        <g transform="matrix(0.579082,0,0,1.01004,460.975,-39.6867)">
+            <path fill="#000000" d="M250.908,330.267L193.126,415.005L180.938,406.694L244.802,313.037C246.174,311.024 248.453,309.819 250.889,309.816C253.326,309.814 255.606,311.015 256.982,313.026L320.994,406.536L308.821,414.869L250.908,330.267Z"/>
+        </g>
+        <g transform="matrix(0.582378,0,0,1.01579,485.019,-211.182)">
+            <path fill="#000000" d="M87.642,581.398L154.757,482.977L142.638,474.713L75.523,573.134L87.642,581.398Z"/>
+        </g>
+    </g>
+  </g>
 </svg>

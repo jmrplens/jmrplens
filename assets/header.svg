@@ -13,20 +13,19 @@
       .subtitle { font: 400 28px 'Segoe UI', Ubuntu, sans-serif; }
       .accent { font: 300 20px 'Segoe UI', Ubuntu, sans-serif; opacity: 0.8; }
       
+      /* Default: Dark mode */
+      .bg { fill: #0d1117; }
+      .title { fill: #c9d1d9; }
+      .subtitle { fill: #8b949e; }
+      .accent { fill: #8b949e; }
+      .gradient-rect { fill: url(#grad-dark); }
+      
       @media (prefers-color-scheme: light) {
         .bg { fill: #ffffff; }
         .title { fill: #24292e; }
         .subtitle { fill: #586069; }
         .accent { fill: #6a737d; }
         .gradient-rect { fill: url(#grad-light); }
-      }
-      
-      @media (prefers-color-scheme: dark) {
-        .bg { fill: #0d1117; }
-        .title { fill: #c9d1d9; }
-        .subtitle { fill: #8b949e; }
-        .accent { fill: #8b949e; }
-        .gradient-rect { fill: url(#grad-dark); }
       }
     </style>
   </defs>
