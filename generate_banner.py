@@ -46,7 +46,7 @@ def generate_banner(theme='dark'):
   <!-- Content -->
   <g transform="translate(40, 60)">
     <text class="title" x="0" y="0">José M. Requena Plens</text>
-    <text class="subtitle" x="0" y="45">Full Stack Developer & IoT Specialist</text>
+    <text class="subtitle" x="0" y="45">Full Stack Developer &amp; IoT Specialist</text>
     <text class="accent" x="0" y="75">🚀 Building scalable solutions | 🔧 Open Source Contributor</text>
   </g>
 </svg>'''
