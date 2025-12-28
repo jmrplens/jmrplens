@@ -200,9 +200,9 @@ def generate_svg(stats):
         
         svg += f'''    <!-- {lang} -->
     <g transform="translate(0, {y_offset})">
-      <g transform="scale(0.1875)">
+      <svg x="0" y="0" width="24" height="24" viewBox="0 0 24 24">
         {icon_svg}
-      </g>
+      </svg>
       <text class="lang-name" x="30" y="16">{lang}</text>
       <rect x="120" y="6" width="{bar_width}" height="12" rx="6" fill="{color}" opacity="0.8"/>
       <text class="lang-lines" x="{120 + bar_width + 10}" y="16">{lines:,} lines</text>
