@@ -43,15 +43,3 @@ jobs:
           git add generated/github-stats.svg
           git diff --quiet && git diff --staged --quiet || git commit -m "📊 Update GitHub stats"
           git push
-      
-      # Mirror to Gitea/Forgejo
-      - name: Checkout for mirroring
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          
-      - name: Mirror to Gitea
-        uses: pixta-dev/repository-mirroring-action@v1
-        with:
-          target_repo_url: ssh://git@git.jmrp.dev:${{ secrets.PORT }}/${{ github.repository }}.git
-          ssh_private_key: ${{ secrets.GITLAB_SSH_PRIVATE_KEY }}
