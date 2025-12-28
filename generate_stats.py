@@ -100,20 +100,13 @@ def load_lang_icon(lang):
             try:
                 with open(icon_file, 'r') as f:
                     content = f.read()
-                    # Find and extract viewBox if exists
-                    if 'viewBox=' in content:
-                        import re
-                        viewbox_match = re.search(r'viewBox="([^"]+)"', content)
-                        if viewbox_match:
-                            viewbox = viewbox_match.group(1)
-                            # Extract inner content
-                            if '<svg' in content and '</svg>' in content:
-                                start = content.find('<svg')
-                                end = content.find('>', start) + 1
-                                close = content.rfind('</svg>')
-                                inner = content[end:close].strip()
-                                # Return complete SVG with proper viewBox
-                                return f'<svg viewBox="{viewbox}" xmlns="http://www.w3.org/2000/svg">{inner}</svg>'
+                    # Extract only inner content without svg wrapper
+                    if '<svg' in content and '</svg>' in content:
+                        svg_start = content.find('<svg')
+                        tag_end = content.find('>', svg_start) + 1
+                        svg_close = content.rfind('</svg>')
+                        inner = content[tag_end:svg_close].strip()
+                        return inner
             except Exception as e:
                 print(f"Error loading icon for {lang}: {e}")
     
