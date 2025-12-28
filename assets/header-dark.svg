@@ -1,0 +1,26 @@
+<svg width="1200" height="180" viewBox="0 0 1200 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad-dark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <style>
+      .title { font: bold 64px 'Segoe UI', Ubuntu, sans-serif; fill: #c9d1d9; }
+      .subtitle { font: 400 28px 'Segoe UI', Ubuntu, sans-serif; fill: #8b949e; }
+      .accent { font: 300 20px 'Segoe UI', Ubuntu, sans-serif; fill: #8b949e; opacity: 0.8; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="180" rx="10" fill="#0d1117"/>
+  
+  <!-- Gradient accent bar -->
+  <rect x="0" y="0" width="8" height="180" rx="10" fill="url(#grad-dark)"/>
+  
+  <!-- Content -->
+  <g transform="translate(40, 60)">
+    <text class="title" x="0" y="0">José M. Requena Plens</text>
+    <text class="subtitle" x="0" y="45">Full Stack Developer & IoT Specialist</text>
+    <text class="accent" x="0" y="75">🚀 Building scalable solutions | 🔧 Open Source Contributor</text>
+  </g>
+</svg>

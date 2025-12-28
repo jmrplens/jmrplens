@@ -114,11 +114,34 @@ def load_lang_icon(lang):
     color = LANG_COLORS.get(lang, '#858585')
     return f'<circle cx="12" cy="12" r="10" fill="{color}"/>'
 
-def generate_svg(stats):
-    """Generate SVG with GitHub statistics"""
+def generate_svg(stats, theme='dark'):
+    """Generate SVG with GitHub statistics for specified theme"""
     
     width = 800
     height = 500  # Increased for 8 languages
+    
+    
+    # Theme-specific colors
+    if theme == 'dark':
+        bg_fill = '#0d1117'
+        bg_stroke = '#30363d'
+        title_fill = '#c9d1d9'
+        stat_label_fill = '#8b949e'
+        stat_value_fill = '#c9d1d9'
+        lang_name_fill = '#8b949e'
+        lang_lines_fill = '#c9d1d9'
+        divider_stroke = '#30363d'
+        icon_filter = 'invert(1) brightness(1.2)'
+    else:  # light
+        bg_fill = '#ffffff'
+        bg_stroke = '#e1e4e8'
+        title_fill = '#24292e'
+        stat_label_fill = '#586069'
+        stat_value_fill = '#24292e'
+        lang_name_fill = '#586069'
+        lang_lines_fill = '#24292e'
+        divider_stroke = '#e1e4e8'
+        icon_filter = 'none'
     
     svg = f'''<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" xmlns="http://www.w3.org/2000/svg">
   <defs>
@@ -127,38 +150,17 @@ def generate_svg(stats):
       <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
     </linearGradient>
     <style>
-      .title {{ font: 600 18px 'Segoe UI', Ubuntu, sans-serif; }}
-      .stat-label {{ font: 400 14px 'Segoe UI', Ubuntu, sans-serif; }}
-      .stat-value {{ font: 700 24px 'Segoe UI', Ubuntu, sans-serif; }}
-      .lang-name {{ font: 400 13px 'Segoe UI', Ubuntu, sans-serif; }}
-      .lang-lines {{ font: 600 12px 'Segoe UI', Ubuntu, sans-serif; }}
-      .lang-icon {{ filter: none; }}
-      
-      @media (prefers-color-scheme: light) {{
-        .bg {{ fill: #ffffff; stroke: #e1e4e8; }}
-        .title {{ fill: #24292e; }}
-        .stat-label {{ fill: #586069; }}
-        .stat-value {{ fill: #24292e; }}
-        .lang-name {{ fill: #586069; }}
-        .lang-lines {{ fill: #24292e; }}
-        .divider {{ stroke: #e1e4e8; }}
-      }}
-      
-      @media (prefers-color-scheme: dark) {{
-        .bg {{ fill: #0d1117; stroke: #30363d; }}
-        .title {{ fill: #c9d1d9; }}
-        .stat-label {{ fill: #8b949e; }}
-        .stat-value {{ fill: #c9d1d9; }}
-        .lang-name {{ fill: #8b949e; }}
-        .lang-lines {{ fill: #c9d1d9; }}
-        .divider {{ stroke: #30363d; }}
-        .lang-icon {{ filter: invert(1) brightness(1.2); }}
-      }}
+      .title {{ font: 600 18px 'Segoe UI', Ubuntu, sans-serif; fill: {title_fill}; }}
+      .stat-label {{ font: 400 14px 'Segoe UI', Ubuntu, sans-serif; fill: {stat_label_fill}; }}
+      .stat-value {{ font: 700 24px 'Segoe UI', Ubuntu, sans-serif; fill: {stat_value_fill}; }}
+      .lang-name {{ font: 400 13px 'Segoe UI', Ubuntu, sans-serif; fill: {lang_name_fill}; }}
+      .lang-lines {{ font: 600 12px 'Segoe UI', Ubuntu, sans-serif; fill: {lang_lines_fill}; }}
+      .lang-icon {{ filter: {icon_filter}; }}
     </style>
   </defs>
   
   <!-- Background -->
-  <rect class="bg" width="{width}" height="{height}" rx="10" stroke-width="1" fill-opacity="0.8"/>
+  <rect width="{width}" height="{height}" rx="10" fill="{bg_fill}" stroke="{bg_stroke}" stroke-width="1" fill-opacity="0.8"/>
   
   <!-- Title -->
   <text class="title" x="25" y="35">📊 GitHub Statistics</text>
@@ -183,7 +185,7 @@ def generate_svg(stats):
   </g>
   
   <!-- Divider -->
-  <line class="divider" x1="25" y1="130" x2="{width-25}" y2="130" stroke-width="1"/>
+  <line x1="25" y1="130" x2="{width-25}" y2="130" stroke="{divider_stroke}" stroke-width="1"/>
   
   <!-- Languages Title -->
   <text class="title" x="25" y="165">💻 Most Used Languages</text>
@@ -228,13 +230,20 @@ if __name__ == '__main__':
     print(f"  - Stars: {stats['total_stars']}")
     print(f"  - Top Languages: {[lang for lang, _, _, _ in stats['languages']]}")
     
-    print("Generating SVG...")
-    svg_content = generate_svg(stats)
-    
-    output_path = 'generated/github-stats.svg'
     os.makedirs('generated', exist_ok=True)
     
-    with open(output_path, 'w') as f:
-        f.write(svg_content)
+    # Generate dark theme
+    print("\nGenerating dark theme SVG...")
+    dark_svg = generate_svg(stats, theme='dark')
+    with open('generated/github-stats-dark.svg', 'w') as f:
+        f.write(dark_svg)
+    print("✅ Created generated/github-stats-dark.svg")
     
-    print(f"✅ SVG generated: {output_path}")
+    # Generate light theme
+    print("Generating light theme SVG...")
+    light_svg = generate_svg(stats, theme='light')
+    with open('generated/github-stats-light.svg', 'w') as f:
+        f.write(light_svg)
+    print("✅ Created generated/github-stats-light.svg")
+    
+    print("\n✨ Both stat themes generated successfully!")

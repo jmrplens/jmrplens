@@ -1,5 +1,6 @@
 <div align="center">
-  <img src="assets/header.svg" alt="Header" width="100%"/>
+  <img src="assets/header-dark.svg#gh-dark-mode-only" alt="Header" width="100%"/>
+  <img src="assets/header-light.svg#gh-light-mode-only" alt="Header" width="100%"/>
 </div>
 
 <br/>
@@ -79,7 +80,8 @@ How to implement client certificate authentication (mTLS) with Nginx for secure 
 ## 📊 GitHub Statistics
 
 <div align="center">
-  <img src="generated/github-stats.svg" alt="GitHub Statistics" width="100%"/>
+  <img src="generated/github-stats-dark.svg#gh-dark-mode-only" alt="GitHub Statistics" width="100%"/>
+  <img src="generated/github-stats-light.svg#gh-light-mode-only" alt="GitHub Statistics" width="100%"/>
 </div>
 
 ## 🔗 Connect With Me
