@@ -1,0 +1,43 @@
+name: Update Blog Posts
+
+on:
+  schedule:
+    # Runs daily at 00:00 UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Update README with latest blog posts
+        uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          feed_list: "https://jmrp.io/rss.xml"
+          max_post_count: 3
+          template: "- [$title]($url) - *$date*"
+          date_format: "mmm dd, yyyy"
+          commit_message: "📝 Updated blog posts"
+          committer_username: "blog-bot"
+          committer_email: "blog-bot@jmrplens.github.io"
+      
+      # Mirror to Gitea/Forgejo
+      - name: Checkout for mirroring
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - name: Mirror to Gitea
+        uses: pixta-dev/repository-mirroring-action@v1
+        with:
+          target_repo_url: ssh://git@git.jmrp.dev:${{ secrets.PORT }}/${{ github.repository }}.git
+          ssh_private_key: ${{ secrets.GITLAB_SSH_PRIVATE_KEY }}

@@ -1,0 +1,47 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad-light" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <style>
+      .title { font: bold 64px 'Segoe UI', Ubuntu, sans-serif; }
+      .subtitle { font: 400 28px 'Segoe UI', Ubuntu, sans-serif; }
+      .accent { font: 300 20px 'Segoe UI', Ubuntu, sans-serif; opacity: 0.8; }
+      
+      @media (prefers-color-scheme: light) {
+        .bg { fill: #ffffff; }
+        .title { fill: #24292e; }
+        .subtitle { fill: #586069; }
+        .accent { fill: #6a737d; }
+        .gradient-rect { fill: url(#grad-light); }
+      }
+      
+      @media (prefers-color-scheme: dark) {
+        .bg { fill: #0d1117; }
+        .title { fill: #c9d1d9; }
+        .subtitle { fill: #8b949e; }
+        .accent { fill: #8b949e; }
+        .gradient-rect { fill: url(#grad-dark); }
+      }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="1200" height="300" rx="10"/>
+  
+  <!-- Gradient accent bar -->
+  <rect class="gradient-rect" x="0" y="0" width="8" height="300" rx="10"/>
+  
+  <!-- Content -->
+  <text x="50" y="110" class="title">José Manuel Requena Plens</text>
+  <text x="50" y="160" class="subtitle">R&amp;D Engineer · Embedded Systems &amp; Acoustics</text>
+  <text x="50" y="200" class="accent">Multidisciplinary Engineer | Software @ Power Electronics</text>
+  
+  <!-- Decorative code brackets -->
+  <text x="1100" y="80" class="accent" style="font-size: 48px; opacity: 0.3;">&lt;/&gt;</text>
+</svg>
