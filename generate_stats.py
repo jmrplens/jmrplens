@@ -81,7 +81,7 @@ LANG_COLORS = {
 def load_lang_icon(lang):
     """Load language icon from file or return fallback"""
     icon_map = {
-        'MATLAB': 'matlab',
+        'MATLAB': 'matlab_bn',  # Black and white version for stats
         'C': 'c',
         'C++': 'cpp',
         'Python': 'python',
@@ -90,7 +90,7 @@ def load_lang_icon(lang):
         'CSS': 'css',
         'TeX': 'tex',
         'Astro': 'astro',
-        'Shell': 'shell',
+        'Shell': 'bash_shell',  # Bash shell icon
         'TypeScript': 'typescript',
     }
     
