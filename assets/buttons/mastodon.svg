@@ -1,0 +1,21 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6364FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#563ACC;stop-opacity:1" />
+    </linearGradient>
+    <style>
+      .btn-bg3 { fill: url(#grad3); }
+      .btn-text3 { fill: white; font: bold 16px 'Segoe UI', Ubuntu, sans-serif; }
+      .btn-icon3 { fill: white; }
+    </style>
+  </defs>
+  
+  <rect class="btn-bg3" width="200" height="60" rx="8"/>
+  
+  <!-- Mastodon icon (simplified elephant) -->
+  <circle class="btn-icon3" cx="30" cy="28" r="8"/>
+  <path class="btn-icon3" d="M 22 28 Q 22 35 30 35 Q 38 35 38 28" fill="none" stroke="white" stroke-width="2"/>
+  
+  <text class="btn-text3" x="50" y="37">Mastodon</text>
+</svg>

@@ -1,5 +1,3 @@
-# José Manuel Requena Plens
-
 <div align="center">
   <img src="assets/header.svg" alt="Header" width="100%"/>
 </div>
@@ -51,7 +49,16 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 
 ## 📝 Latest Blog Posts
 
-<!-- BLOG-POST-LIST:START -->- [Serve Virtual Files with Nginx: Beyond the Document Root](https://jmrp.io/blog/serve-virtual-files-nginx/) - *Dec 18, 2025*- [Mastering Content Security Policy &lpar;CSP&rpar; with Nginx: A Deep Dive](https://jmrp.io/blog/implementing-content-security-policy-nginx/) - *Dec 18, 2025*- [Securing Nginx with Client Certificates &lpar;mTLS&rpar;](https://jmrp.io/blog/secure-nginx-client-certificates/) - *Dec 16, 2025*<!-- BLOG-POST-LIST:END -->
+<!-- BLOG-POST-LIST:START -->
+- 📄 [Serve Virtual Files with Nginx: Beyond the Document Root](https://jmrp.io/blog/serve-virtual-files-nginx/)  
+  *Dec 18, 2025*
+
+- 📄 [Mastering Content Security Policy (CSP) with Nginx: A Deep Dive](https://jmrp.io/blog/implementing-content-security-policy-nginx/)  
+  *Dec 18, 2025*
+
+- 📄 [Securing Nginx with Client Certificates (mTLS)](https://jmrp.io/blog/secure-nginx-client-certificates/)  
+  *Dec 16, 2025*
+<!-- BLOG-POST-LIST:END -->
 
 > 📚 [Read more on my blog →](https://jmrp.io/blog)
 
@@ -65,12 +72,18 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 ## 🔗 Connect With Me
 
 <div align="center">
-  
-[![Website](https://img.shields.io/badge/🌐_Website-jmrp.io-667eea?style=for-the-badge)](https://jmrp.io)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jmrplens/)
-[![Mastodon](https://img.shields.io/badge/Mastodon-6364FF?style=for-the-badge&logo=mastodon&logoColor=white)](https://mstdn.jmrp.io/@jmrplens)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jmrplens@gmail.com)
-
+  <a href="https://jmrp.io">
+    <img src="assets/buttons/website.svg" alt="Website" height="50"/>
+  </a>
+  <a href="https://www.linkedin.com/in/jmrplens/">
+    <img src="assets/buttons/linkedin.svg" alt="LinkedIn" height="50"/>
+  </a>
+  <a href="https://mstdn.jmrp.io/@jmrplens">
+    <img src="assets/buttons/mastodon.svg" alt="Mastodon" height="50"/>
+  </a>
+  <a href="mailto:jmrplens@gmail.com">
+    <img src="assets/buttons/email.svg" alt="Email" height="50"/>
+  </a>
 </div>
 
 ---

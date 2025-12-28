@@ -1,4 +1,4 @@
-<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="180" viewBox="0 0 1200 180" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="grad-light" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
@@ -32,16 +32,16 @@
   </defs>
   
   <!-- Background -->
-  <rect class="bg" width="1200" height="300" rx="10"/>
+  <rect class="bg" width="1200" height="180" rx="10"/>
   
   <!-- Gradient accent bar -->
-  <rect class="gradient-rect" x="0" y="0" width="8" height="300" rx="10"/>
+  <rect class="gradient-rect" x="0" y="0" width="8" height="180" rx="10"/>
   
   <!-- Content -->
-  <text x="50" y="110" class="title">José Manuel Requena Plens</text>
-  <text x="50" y="160" class="subtitle">R&amp;D Engineer · Embedded Systems &amp; Acoustics</text>
-  <text x="50" y="200" class="accent">Multidisciplinary Engineer | Software @ Power Electronics</text>
+  <text x="50" y="70" class="title">José Manuel Requena Plens</text>
+  <text x="50" y="105" class="subtitle">R&amp;D Engineer · Embedded Systems &amp; Acoustics</text>
+  <text x="50" y="135" class="accent">Multidisciplinary Engineer | Software @ Power Electronics</text>
   
   <!-- Decorative code brackets -->
-  <text x="1100" y="80" class="accent" style="font-size: 48px; opacity: 0.3;">&lt;/&gt;</text>
+  <text x="1100" y="60" class="accent" style="font-size: 48px; opacity: 0.3;">&lt;/&gt;</text>
 </svg>

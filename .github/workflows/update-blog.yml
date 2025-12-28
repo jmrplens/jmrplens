@@ -24,7 +24,7 @@ jobs:
         with:
           feed_list: "https://jmrp.io/rss.xml"
           max_post_count: 3
-          template: "- [$title]($url) - *$date*"
+          template: "$newline- 📄 [$title]($url)$newline  *$date*$newline"
           date_format: "mmm dd, yyyy"
           commit_message: "📝 Updated blog posts"
           committer_username: "blog-bot"
