@@ -1,10 +1,3 @@
-<div align="center">
-  <img src="assets/header-dark.svg#gh-dark-mode-only" alt="Header" width="100%"/>
-  <img src="assets/header-light.svg#gh-light-mode-only" alt="Header" width="100%"/>
-</div>
-
-<br/>
-
 ## 👋 About Me
 
 Multidisciplinary **R&D Engineer** with a deep passion for the intersection of hardware and software. Currently working at **Power Electronics**, I specialize in **Embedded Systems**, **Acoustics**, and **Industrial Software Development**. My journey has been defined by a constant drive to learn and adapt, moving from fundamental acoustic research to building robust industrial systems.
