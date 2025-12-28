@@ -36,8 +36,8 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
   <a href="https://matrix.org/"><img src="https://skillicons.dev/icons?i=matrix" alt="Matrix"/></a>
   <a href="https://element-hq.github.io/synapse/"><img src="https://cdn.simpleicons.org/matrix/000000" width="48" height="48" alt="Matrix Synapse"/></a>
   <a href="https://joinmastodon.org/"><img src="https://skillicons.dev/icons?i=mastodon" alt="Mastodon"/></a>
-  <a href="https://www.home-assistant.io/"><img src="https://skillicons.dev/icons?i=homeassistant" alt="Home Assistant"/></a>
-  <a href="https://meshtastic.org/"><img src="https://cdn.simpleicons.org/meshtastic/67EA94" width="48" height="48" alt="Meshtastic"/></a>
+  <a href="https://www.home-assistant.io/"><img src="https://cdn.simpleicons.org/homeassistant/41BDF5" width="48" height="48" alt="Home Assistant"/></a>
+  <a href="https://meshtastic.org/"><img src="https://cdn.simpleicons.org/rss/67EA94" width="48" height="48" alt="Meshtastic"/></a>
 </p>
 
 ## 📝 Latest Blog Posts
