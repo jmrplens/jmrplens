@@ -79,7 +79,7 @@ LANG_COLORS = {
 }
 
 def load_lang_icon(lang):
-    """Load language icon from file or return fallback"""
+    """Load language icon from file and return as embedded SVG"""
     icon_map = {
         'MATLAB': 'matlab_bn',  # Black and white version for stats
         'C': 'c',
@@ -97,15 +97,25 @@ def load_lang_icon(lang):
     if lang in icon_map:
         icon_file = f'assets/icons/lang/{icon_map[lang]}.svg'
         if os.path.exists(icon_file):
-            with open(icon_file, 'r') as f:
-                content = f.read()
-                # Extract the SVG content (remove xml declaration and outer svg tag)
-                if '<svg' in content and '</svg>' in content:
-                    start = content.find('<svg')
-                    end = content.find('>', start) + 1
-                    close = content.rfind('</svg>')
-                    inner = content[end:close].strip()
-                    return inner
+            try:
+                with open(icon_file, 'r') as f:
+                    content = f.read()
+                    # Find and extract viewBox if exists
+                    if 'viewBox=' in content:
+                        import re
+                        viewbox_match = re.search(r'viewBox="([^"]+)"', content)
+                        if viewbox_match:
+                            viewbox = viewbox_match.group(1)
+                            # Extract inner content
+                            if '<svg' in content and '</svg>' in content:
+                                start = content.find('<svg')
+                                end = content.find('>', start) + 1
+                                close = content.rfind('</svg>')
+                                inner = content[end:close].strip()
+                                # Return complete SVG with proper viewBox
+                                return f'<svg viewBox="{viewbox}" xmlns="http://www.w3.org/2000/svg">{inner}</svg>'
+            except Exception as e:
+                print(f"Error loading icon for {lang}: {e}")
     
     # Fallback: simple colored circle
     color = LANG_COLORS.get(lang, '#858585')
@@ -197,9 +207,9 @@ def generate_svg(stats):
         
         svg += f'''    <!-- {lang} -->
     <g transform="translate(0, {y_offset})">
-      <svg x="0" y="0" width="24" height="24" viewBox="0 0 24 24">
+      <g transform="scale(0.1875)">
         {icon_svg}
-      </svg>
+      </g>
       <text class="lang-name" x="30" y="16">{lang}</text>
       <rect x="120" y="6" width="{bar_width}" height="12" rx="6" fill="{color}" opacity="0.8"/>
       <text class="lang-lines" x="{120 + bar_width + 10}" y="16">{lines:,} lines</text>
