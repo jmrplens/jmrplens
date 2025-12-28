@@ -38,9 +38,15 @@ def fetch_github_stats():
         for lang, bytes_count in lang_data.items():
             languages_bytes[lang] = languages_bytes.get(lang, 0) + bytes_count
     
-    # Sort and get top 6 languages
-    sorted_langs = sorted(languages_bytes.items(), key=lambda x: x[1], reverse=True)[:6]
+    # Sort and get top 8 languages with lines of code
+    sorted_langs = sorted(languages_bytes.items(), key=lambda x: x[1], reverse=True)[:8]
     total_bytes = sum(languages_bytes.values())
+    
+    # Estimate lines (50 bytes per line average)
+    languages_with_lines = [
+        (lang, bytes_count, bytes_count // 50, (bytes_count / total_bytes * 100)) 
+        for lang, bytes_count in sorted_langs
+    ]
     
     # Get contribution data (approximate from events)
     events_url = f'https://api.github.com/users/{USERNAME}/events/public?per_page=100'
@@ -52,7 +58,7 @@ def fetch_github_stats():
         'total_repos': total_repos,
         'public_repos': user_data.get('public_repos', 0),
         'total_commits': recent_commits * 10,  # Rough estimate
-        'languages': [(lang, bytes_count, (bytes_count / total_bytes * 100)) for lang, bytes_count in sorted_langs],
+        'languages': languages_with_lines,  # (lang, bytes, lines, percent)
         'total_lines': total_bytes // 50,  # Rough estimate: 50 bytes per line average
     }
 
@@ -74,7 +80,23 @@ def generate_svg(stats):
     """Generate SVG with GitHub statistics"""
     
     width = 800
-    height = 400
+    height = 500  # Increased for 8 languages
+    
+    # Language icon paths (simplified inline SVG paths)
+    lang_icons = {
+        'MATLAB': '<path d="M0 0h24v24H0z" fill="#e16737"/><text x="12" y="17" fill="white" font-size="14" font-family="monospace" text-anchor="middle" font-weight="bold">M</text>',
+        'C': '<circle cx="12" cy="12" r="10" fill="#555555"/><text x="12" y="17" fill="white" font-size="14" font-family="monospace" text-anchor="middle" font-weight="bold">C</text>',
+        'C++': '<circle cx="12" cy="12" r="10" fill="#f34b7d"/><text x="12" y="17" fill="white" font-size="12" font-family="monospace" text-anchor="middle" font-weight="bold">C++</text>',
+        'Python': '<circle cx="12" cy="12" r="10" fill="#3572A5"/><path d="M9 8.5c0-.8.7-1.5 1.5-1.5h3c.8 0 1.5.7 1.5 1.5v7c0 .8-.7 1.5-1.5 1.5h-3c-.8 0-1.5-.7-1.5-1.5v-7z" fill="#ffd43b"/>',
+        'JavaScript': '<rect x="2" y="2" width="20" height="20" rx="2" fill="#f7df1e"/><text x="12" y="17" fill="#000" font-size="14" font-family="monospace" text-anchor="middle" font-weight="bold">JS</text>',
+        'HTML': '<circle cx="12" cy="12" r="10" fill="#e34c26"/><text x="12" y="17" fill="white" font-size="10" font-family="monospace" text-anchor="middle" font-weight="bold">HTML</text>',
+        'CSS': '<circle cx="12" cy="12" r="10" fill="#563d7c"/><text x="12" y="17" fill="white" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">CSS</text>',
+        'Pascal': '<circle cx="12" cy="12" r="10" fill="#E3F171"/><text x="12" y="17" fill="#000" font-size="12" font-family="monospace" text-anchor="middle" font-weight="bold">P</text>',
+        'TeX': '<circle cx="12" cy="12" r="10" fill="#3D6117"/><text x="12" y="17" fill="white" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">TeX</text>',
+        'Astro': '<circle cx="12" cy="12" r="10" fill="#FF5D01"/><text x="12" y="17" fill="white" font-size="12" font-family="monospace" text-anchor="middle" font-weight="bold">A</text>',
+        'Shell': '<circle cx="12" cy="12" r="10" fill="#89e051"/><text x="12" y="17" fill="#000" font-size="12" font-family="monospace" text-anchor="middle" font-weight="bold">$</text>',
+        'TypeScript': '<rect x="2" y="2" width="20" height="20" rx="2" fill="#2b7489"/><text x="12" y="17" fill="white" font-size="14" font-family="monospace" text-anchor="middle" font-weight="bold">TS</text>',
+    }
     
     svg = f'''<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" xmlns="http://www.w3.org/2000/svg">
   <defs>
@@ -86,8 +108,8 @@ def generate_svg(stats):
       .title {{ font: 600 18px 'Segoe UI', Ubuntu, sans-serif; }}
       .stat-label {{ font: 400 14px 'Segoe UI', Ubuntu, sans-serif; }}
       .stat-value {{ font: 700 24px 'Segoe UI', Ubuntu, sans-serif; }}
-      .lang-name {{ font: 400 12px 'Segoe UI', Ubuntu, sans-serif; }}
-      .lang-percent {{ font: 600 12px 'Segoe UI', Ubuntu, sans-serif; }}
+      .lang-name {{ font: 400 13px 'Segoe UI', Ubuntu, sans-serif; }}
+      .lang-lines {{ font: 600 12px 'Segoe UI', Ubuntu, sans-serif; }}
       
       @media (prefers-color-scheme: light) {{
         .bg {{ fill: #ffffff; stroke: #e1e4e8; }}
@@ -95,7 +117,7 @@ def generate_svg(stats):
         .stat-label {{ fill: #586069; }}
         .stat-value {{ fill: #24292e; }}
         .lang-name {{ fill: #586069; }}
-        .lang-percent {{ fill: #24292e; }}
+        .lang-lines {{ fill: #24292e; }}
         .divider {{ stroke: #e1e4e8; }}
       }}
       
@@ -105,7 +127,7 @@ def generate_svg(stats):
         .stat-label {{ fill: #8b949e; }}
         .stat-value {{ fill: #c9d1d9; }}
         .lang-name {{ fill: #8b949e; }}
-        .lang-percent {{ fill: #c9d1d9; }}
+        .lang-lines {{ fill: #c9d1d9; }}
         .divider {{ stroke: #30363d; }}
       }}
     </style>
@@ -147,17 +169,24 @@ def generate_svg(stats):
 '''
     
     y_offset = 0
-    for i, (lang, bytes_count, percent) in enumerate(stats['languages']):
+    for i, (lang, bytes_count, lines, percent) in enumerate(stats['languages']):
         color = LANG_COLORS.get(lang, '#858585')
-        bar_width = (percent / 100) * 550
+        bar_width = (percent / 100) * 500
+        
+        # Get icon or use default circle
+        icon_svg = lang_icons.get(lang, f'<circle cx="12" cy="12" r="10" fill="{color}"/>')
         
         svg += f'''    <!-- {lang} -->
-    <circle cx="0" cy="{y_offset + 8}" r="5" fill="{color}"/>
-    <text class="lang-name" x="15" y="{y_offset + 12}">{lang}</text>
-    <rect x="120" y="{y_offset + 2}" width="{bar_width}" height="12" rx="6" fill="{color}" opacity="0.8"/>
-    <text class="lang-percent" x="{120 + bar_width + 10}" y="{y_offset + 12}">{percent:.1f}%</text>
+    <g transform="translate(0, {y_offset})">
+      <svg x="0" y="0" width="24" height="24" viewBox="0 0 24 24">
+        {icon_svg}
+      </svg>
+      <text class="lang-name" x="30" y="16">{lang}</text>
+      <rect x="120" y="6" width="{bar_width}" height="12" rx="6" fill="{color}" opacity="0.8"/>
+      <text class="lang-lines" x="{120 + bar_width + 10}" y="16">{lines:,} lines</text>
+    </g>
 '''
-        y_offset += 30
+        y_offset += 35
     
     svg += f'''  </g>
   
@@ -173,7 +202,7 @@ if __name__ == '__main__':
     
     print(f"  - Repos: {stats['total_repos']}")
     print(f"  - Stars: {stats['total_stars']}")
-    print(f"  - Top Languages: {[lang for lang, _, _ in stats['languages']]}")
+    print(f"  - Top Languages: {[lang for lang, _, _, _ in stats['languages']]}")
     
     print("Generating SVG...")
     svg_content = generate_svg(stats)

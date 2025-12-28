@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <rect width="48" height="48" rx="8" fill="#000000"/>
+  <!-- Matrix logo [m] -->
+  <path d="M8 12 L8 36 M10 12 L10 36" stroke="white" stroke-width="2" fill="none"/>
+  <path d="M40 12 L40 36 M38 12 L38 36" stroke="white" stroke-width="2" fill="none"/>
+  <text x="24" y="30" fill="white" font-family="monospace" font-size="20" font-weight="bold" text-anchor="middle">[m]</text>
+</svg>
