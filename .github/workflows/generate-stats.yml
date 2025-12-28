@@ -1,0 +1,57 @@
+name: Generate GitHub Stats
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    # Run daily at 00:00 UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-stats:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Generate stats SVG
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python generate_stats.py
+      
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name "stats-bot"
+          git config --global user.email "stats-bot@jmrplens.github.io"
+          git add generated/github-stats.svg
+          git diff --quiet && git diff --staged --quiet || git commit -m "📊 Update GitHub stats"
+          git push
+      
+      # Mirror to Gitea/Forgejo
+      - name: Checkout for mirroring
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - name: Mirror to Gitea
+        uses: pixta-dev/repository-mirroring-action@v1
+        with:
+          target_repo_url: ssh://git@git.jmrp.dev:${{ secrets.PORT }}/${{ github.repository }}.git
+          ssh_private_key: ${{ secrets.GITLAB_SSH_PRIVATE_KEY }}

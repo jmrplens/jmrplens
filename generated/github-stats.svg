@@ -1,0 +1,103 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <style>
+      .title { font: 600 18px 'Segoe UI', Ubuntu, sans-serif; }
+      .stat-label { font: 400 14px 'Segoe UI', Ubuntu, sans-serif; }
+      .stat-value { font: 700 24px 'Segoe UI', Ubuntu, sans-serif; }
+      .lang-name { font: 400 12px 'Segoe UI', Ubuntu, sans-serif; }
+      .lang-percent { font: 600 12px 'Segoe UI', Ubuntu, sans-serif; }
+      
+      @media (prefers-color-scheme: light) {
+        .bg { fill: #ffffff; stroke: #e1e4e8; }
+        .title { fill: #24292e; }
+        .stat-label { fill: #586069; }
+        .stat-value { fill: #24292e; }
+        .lang-name { fill: #586069; }
+        .lang-percent { fill: #24292e; }
+        .divider { stroke: #e1e4e8; }
+      }
+      
+      @media (prefers-color-scheme: dark) {
+        .bg { fill: #0d1117; stroke: #30363d; }
+        .title { fill: #c9d1d9; }
+        .stat-label { fill: #8b949e; }
+        .stat-value { fill: #c9d1d9; }
+        .lang-name { fill: #8b949e; }
+        .lang-percent { fill: #c9d1d9; }
+        .divider { stroke: #30363d; }
+      }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="800" height="400" rx="10" stroke-width="1" fill-opacity="0.8"/>
+  
+  <!-- Title -->
+  <text class="title" x="25" y="35">📊 GitHub Statistics</text>
+  
+  <!-- Stats Grid -->
+  <g transform="translate(25, 60)">
+    <!-- Total Repos -->
+    <text class="stat-label" x="0" y="0">Total Repositories</text>
+    <text class="stat-value" x="0" y="28">21</text>
+    
+    <!-- Total Stars -->
+    <text class="stat-label" x="190" y="0">Total Stars</text>
+    <text class="stat-value" x="190" y="28">247</text>
+    
+    <!-- Total Commits (estimate) -->
+    <text class="stat-label" x="380" y="0">Commits (est.)</text>
+    <text class="stat-value" x="380" y="28">700</text>
+    
+    <!-- Lines of Code (estimate) -->
+    <text class="stat-label" x="570" y="0">Lines of Code (est.)</text>
+    <text class="stat-value" x="570" y="28">102,351</text>
+  </g>
+  
+  <!-- Divider -->
+  <line class="divider" x1="25" y1="130" x2="775" y2="130" stroke-width="1"/>
+  
+  <!-- Languages Title -->
+  <text class="title" x="25" y="165">💻 Most Used Languages</text>
+  
+  <!-- Languages List -->
+  <g transform="translate(25, 180)">
+    <!-- MATLAB -->
+    <circle cx="0" cy="8" r="5" fill="#e16737"/>
+    <text class="lang-name" x="15" y="12">MATLAB</text>
+    <rect x="120" y="2" width="245.8715210003754" height="12" rx="6" fill="#e16737" opacity="0.8"/>
+    <text class="lang-percent" x="375.8715210003754" y="12">44.7%</text>
+    <!-- C -->
+    <circle cx="0" cy="38" r="5" fill="#555555"/>
+    <text class="lang-name" x="15" y="42">C</text>
+    <rect x="120" y="32" width="107.50999638697755" height="12" rx="6" fill="#555555" opacity="0.8"/>
+    <text class="lang-percent" x="237.50999638697755" y="42">19.5%</text>
+    <!-- HTML -->
+    <circle cx="0" cy="68" r="5" fill="#e34c26"/>
+    <text class="lang-name" x="15" y="72">HTML</text>
+    <rect x="120" y="62" width="64.00801430514584" height="12" rx="6" fill="#e34c26" opacity="0.8"/>
+    <text class="lang-percent" x="194.00801430514582" y="72">11.6%</text>
+    <!-- Pascal -->
+    <circle cx="0" cy="98" r="5" fill="#858585"/>
+    <text class="lang-name" x="15" y="102">Pascal</text>
+    <rect x="120" y="92" width="36.76228833091456" height="12" rx="6" fill="#858585" opacity="0.8"/>
+    <text class="lang-percent" x="166.76228833091454" y="102">6.7%</text>
+    <!-- TeX -->
+    <circle cx="0" cy="128" r="5" fill="#858585"/>
+    <text class="lang-name" x="15" y="132">TeX</text>
+    <rect x="120" y="122" width="27.12524955550445" height="12" rx="6" fill="#858585" opacity="0.8"/>
+    <text class="lang-percent" x="157.12524955550444" y="132">4.9%</text>
+    <!-- Astro -->
+    <circle cx="0" cy="158" r="5" fill="#858585"/>
+    <text class="lang-name" x="15" y="162">Astro</text>
+    <rect x="120" y="152" width="20.4532633369672" height="12" rx="6" fill="#858585" opacity="0.8"/>
+    <text class="lang-percent" x="150.4532633369672" y="162">3.7%</text>
+  </g>
+  
+  <!-- Footer -->
+  <text class="stat-label" x="400" y="385" text-anchor="middle">Generated on 2025-12-28 03:01 UTC</text>
+</svg>

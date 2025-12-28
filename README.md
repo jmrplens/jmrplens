@@ -34,8 +34,10 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 <p align="center">
   <a href="https://mikrotik.com/"><img src="https://cdn.simpleicons.org/mikrotik/293239" width="48" height="48" alt="MikroTik"/></a>
   <a href="https://matrix.org/"><img src="https://skillicons.dev/icons?i=matrix" alt="Matrix"/></a>
+  <a href="https://element-hq.github.io/synapse/"><img src="https://cdn.simpleicons.org/matrix/000000" width="48" height="48" alt="Matrix Synapse"/></a>
   <a href="https://joinmastodon.org/"><img src="https://skillicons.dev/icons?i=mastodon" alt="Mastodon"/></a>
   <a href="https://www.home-assistant.io/"><img src="https://skillicons.dev/icons?i=homeassistant" alt="Home Assistant"/></a>
+  <a href="https://meshtastic.org/"><img src="https://cdn.simpleicons.org/meshtastic/67EA94" width="48" height="48" alt="Meshtastic"/></a>
 </p>
 
 ## 📝 Latest Blog Posts
@@ -75,33 +77,26 @@ How to implement client certificate authentication (mTLS) with Nginx for secure 
   </a>
 </p>
 
-## 💻 Most Used Languages
+## 📊 GitHub Statistics
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=cpp,c,python,matlab,js,bash&theme=dark" alt="Top Languages" />
+  <img src="generated/github-stats.svg" alt="GitHub Statistics" width="100%"/>
 </div>
 
 ## 🔗 Connect With Me
 
-<div align="center">
-  
-[![Website](https://img.shields.io/badge/🌐_Website-667eea?style=for-the-badge)](https://jmrp.io)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jmrplens/)
-[![Mastodon](https://img.shields.io/badge/Mastodon-6364FF?style=for-the-badge&logo=mastodon&logoColor=white)](https://mstdn.jmrp.io/@jmrplens)
+<p align="center">
+  <a href="https://jmrp.io">
+    <img src="https://img.shields.io/badge/-Website-667eea?style=flat-square&logo=googlechrome&logoColor=white" alt="Website"/>
+  </a>
+  <a href="https://www.linkedin.com/in/jmrplens/">
+    <img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+  <a href="https://mstdn.jmrp.io/@jmrplens">
+    <img src="https://img.shields.io/badge/-Mastodon-6364FF?style=flat-square&logo=mastodon&logoColor=white" alt="Mastodon"/>
+  </a>
+</p>
 
-</div>
-
----
-
-<div align="center">
-  
-### 💝 Support My Work
-
-[![Ko-fi](https://img.shields.io/badge/Ko--fi-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/X8X147IR3)
-[![Liberapay](https://img.shields.io/badge/Liberapay-F6C915?style=for-the-badge&logo=liberapay&logoColor=black)](https://liberapay.com/jmrplens/donate)
-
-</div>
-
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=jmrplens&style=for-the-badge&color=667eea" alt="Profile Views"/>
-</div>
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=jmrplens&style=flat-square&color=667eea" alt="Profile Views"/>
+</p>
