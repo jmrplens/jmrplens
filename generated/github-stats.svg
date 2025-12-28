@@ -1,4 +1,4 @@
-<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
@@ -8,8 +8,8 @@
       .title { font: 600 18px 'Segoe UI', Ubuntu, sans-serif; }
       .stat-label { font: 400 14px 'Segoe UI', Ubuntu, sans-serif; }
       .stat-value { font: 700 24px 'Segoe UI', Ubuntu, sans-serif; }
-      .lang-name { font: 400 12px 'Segoe UI', Ubuntu, sans-serif; }
-      .lang-percent { font: 600 12px 'Segoe UI', Ubuntu, sans-serif; }
+      .lang-name { font: 400 13px 'Segoe UI', Ubuntu, sans-serif; }
+      .lang-lines { font: 600 12px 'Segoe UI', Ubuntu, sans-serif; }
       
       @media (prefers-color-scheme: light) {
         .bg { fill: #ffffff; stroke: #e1e4e8; }
@@ -17,7 +17,7 @@
         .stat-label { fill: #586069; }
         .stat-value { fill: #24292e; }
         .lang-name { fill: #586069; }
-        .lang-percent { fill: #24292e; }
+        .lang-lines { fill: #24292e; }
         .divider { stroke: #e1e4e8; }
       }
       
@@ -27,14 +27,14 @@
         .stat-label { fill: #8b949e; }
         .stat-value { fill: #c9d1d9; }
         .lang-name { fill: #8b949e; }
-        .lang-percent { fill: #c9d1d9; }
+        .lang-lines { fill: #c9d1d9; }
         .divider { stroke: #30363d; }
       }
     </style>
   </defs>
   
   <!-- Background -->
-  <rect class="bg" width="800" height="400" rx="10" stroke-width="1" fill-opacity="0.8"/>
+  <rect class="bg" width="800" height="500" rx="10" stroke-width="1" fill-opacity="0.8"/>
   
   <!-- Title -->
   <text class="title" x="25" y="35">📊 GitHub Statistics</text>
@@ -55,7 +55,7 @@
     
     <!-- Lines of Code (estimate) -->
     <text class="stat-label" x="570" y="0">Lines of Code (est.)</text>
-    <text class="stat-value" x="570" y="28">102,487</text>
+    <text class="stat-value" x="570" y="28">102,543</text>
   </g>
   
   <!-- Divider -->
@@ -67,37 +67,79 @@
   <!-- Languages List -->
   <g transform="translate(25, 180)">
     <!-- MATLAB -->
-    <circle cx="0" cy="8" r="5" fill="#e16737"/>
-    <text class="lang-name" x="15" y="12">MATLAB</text>
-    <rect x="120" y="2" width="245.54745740584227" height="12" rx="6" fill="#e16737" opacity="0.8"/>
-    <text class="lang-percent" x="375.54745740584224" y="12">44.6%</text>
+    <g transform="translate(0, 0)">
+      <svg x="0" y="0" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M0 0h24v24H0z" fill="#e16737"/><text x="12" y="17" fill="white" font-size="14" font-family="monospace" text-anchor="middle" font-weight="bold">M</text>
+      </svg>
+      <text class="lang-name" x="30" y="16">MATLAB</text>
+      <rect x="120" y="6" width="223.10262029898405" height="12" rx="6" fill="#e16737" opacity="0.8"/>
+      <text class="lang-lines" x="353.10262029898405" y="16">45,755 lines</text>
+    </g>
     <!-- C -->
-    <circle cx="0" cy="38" r="5" fill="#555555"/>
-    <text class="lang-name" x="15" y="42">C</text>
-    <rect x="120" y="32" width="107.36829605610698" height="12" rx="6" fill="#555555" opacity="0.8"/>
-    <text class="lang-percent" x="237.368296056107" y="42">19.5%</text>
+    <g transform="translate(0, 35)">
+      <svg x="0" y="0" width="24" height="24" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" fill="#555555"/><text x="12" y="17" fill="white" font-size="14" font-family="monospace" text-anchor="middle" font-weight="bold">C</text>
+      </svg>
+      <text class="lang-name" x="30" y="16">C</text>
+      <rect x="120" y="6" width="97.55404694565006" height="12" rx="6" fill="#555555" opacity="0.8"/>
+      <text class="lang-lines" x="227.55404694565004" y="16">20,007 lines</text>
+    </g>
     <!-- HTML -->
-    <circle cx="0" cy="68" r="5" fill="#e34c26"/>
-    <text class="lang-name" x="15" y="72">HTML</text>
-    <rect x="120" y="62" width="63.92365045889696" height="12" rx="6" fill="#e34c26" opacity="0.8"/>
-    <text class="lang-percent" x="193.92365045889696" y="72">11.6%</text>
+    <g transform="translate(0, 70)">
+      <svg x="0" y="0" width="24" height="24" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" fill="#e34c26"/><text x="12" y="17" fill="white" font-size="10" font-family="monospace" text-anchor="middle" font-weight="bold">HTML</text>
+      </svg>
+      <text class="lang-name" x="30" y="16">HTML</text>
+      <rect x="120" y="6" width="58.08056034106971" height="12" rx="6" fill="#e34c26" opacity="0.8"/>
+      <text class="lang-lines" x="188.0805603410697" y="16">11,911 lines</text>
+    </g>
     <!-- Pascal -->
-    <circle cx="0" cy="98" r="5" fill="#858585"/>
-    <text class="lang-name" x="15" y="102">Pascal</text>
-    <rect x="120" y="92" width="36.713834897791" height="12" rx="6" fill="#858585" opacity="0.8"/>
-    <text class="lang-percent" x="166.713834897791" y="102">6.7%</text>
+    <g transform="translate(0, 105)">
+      <svg x="0" y="0" width="24" height="24" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" fill="#E3F171"/><text x="12" y="17" fill="#000" font-size="12" font-family="monospace" text-anchor="middle" font-weight="bold">P</text>
+      </svg>
+      <text class="lang-name" x="30" y="16">Pascal</text>
+      <rect x="120" y="6" width="33.35792132998307" height="12" rx="6" fill="#858585" opacity="0.8"/>
+      <text class="lang-lines" x="163.35792132998307" y="16">6,841 lines</text>
+    </g>
     <!-- TeX -->
-    <circle cx="0" cy="128" r="5" fill="#858585"/>
-    <text class="lang-name" x="15" y="132">TeX</text>
-    <rect x="120" y="122" width="27.08949793271462" height="12" rx="6" fill="#858585" opacity="0.8"/>
-    <text class="lang-percent" x="157.0894979327146" y="132">4.9%</text>
+    <g transform="translate(0, 140)">
+      <svg x="0" y="0" width="24" height="24" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" fill="#3D6117"/><text x="12" y="17" fill="white" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">TeX</text>
+      </svg>
+      <text class="lang-name" x="30" y="16">TeX</text>
+      <rect x="120" y="6" width="24.61331929568067" height="12" rx="6" fill="#858585" opacity="0.8"/>
+      <text class="lang-lines" x="154.61331929568067" y="16">5,047 lines</text>
+    </g>
     <!-- Astro -->
-    <circle cx="0" cy="158" r="5" fill="#858585"/>
-    <text class="lang-name" x="15" y="162">Astro</text>
-    <rect x="120" y="152" width="20.42630552579028" height="12" rx="6" fill="#858585" opacity="0.8"/>
-    <text class="lang-percent" x="150.42630552579027" y="162">3.7%</text>
+    <g transform="translate(0, 175)">
+      <svg x="0" y="0" width="24" height="24" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" fill="#FF5D01"/><text x="12" y="17" fill="white" font-size="12" font-family="monospace" text-anchor="middle" font-weight="bold">A</text>
+      </svg>
+      <text class="lang-name" x="30" y="16">Astro</text>
+      <rect x="120" y="6" width="18.559191506101914" height="12" rx="6" fill="#858585" opacity="0.8"/>
+      <text class="lang-lines" x="148.5591915061019" y="16">3,806 lines</text>
+    </g>
+    <!-- C++ -->
+    <g transform="translate(0, 210)">
+      <svg x="0" y="0" width="24" height="24" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" fill="#f34b7d"/><text x="12" y="17" fill="white" font-size="12" font-family="monospace" text-anchor="middle" font-weight="bold">C++</text>
+      </svg>
+      <text class="lang-name" x="30" y="16">C++</text>
+      <rect x="120" y="6" width="13.40468403286574" height="12" rx="6" fill="#f34b7d" opacity="0.8"/>
+      <text class="lang-lines" x="143.40468403286573" y="16">2,749 lines</text>
+    </g>
+    <!-- Shell -->
+    <g transform="translate(0, 245)">
+      <svg x="0" y="0" width="24" height="24" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" fill="#89e051"/><text x="12" y="17" fill="#000" font-size="12" font-family="monospace" text-anchor="middle" font-weight="bold">$</text>
+      </svg>
+      <text class="lang-name" x="30" y="16">Shell</text>
+      <rect x="120" y="6" width="8.70803210274376" height="12" rx="6" fill="#89e051" opacity="0.8"/>
+      <text class="lang-lines" x="138.70803210274377" y="16">1,785 lines</text>
+    </g>
   </g>
   
   <!-- Footer -->
-  <text class="stat-label" x="400" y="385" text-anchor="middle">Generated on 2025-12-28 02:05 UTC</text>
+  <text class="stat-label" x="400" y="485" text-anchor="middle">Generated on 2025-12-28 02:16 UTC</text>
 </svg>
