@@ -10,84 +10,85 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 
 ## 🛠️ Tech Stack
 
-<details open>
-<summary><b>Languages</b></summary>
-<br/>
+### Languages
+<p align="center">
+  <a href="https://isocpp.org/"><img src="https://skillicons.dev/icons?i=cpp" alt="C++" /></a>
+  <a href="https://en.wikipedia.org/wiki/C_(programming_language)"><img src="https://skillicons.dev/icons?i=c" alt="C"/></a>
+  <a href="https://www.python.org/"><img src="https://skillicons.dev/icons?i=python" alt="Python"/></a>
+  <a href="https://www.mathworks.com/products/matlab.html"><img src="https://skillicons.dev/icons?i=matlab" alt="MATLAB"/></a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://skillicons.dev/icons?i=js" alt="JavaScript"/></a>
+  <a href="https://www.gnu.org/software/bash/"><img src="https://skillicons.dev/icons?i=bash" alt="Bash"/></a>
+</p>
 
-![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=for-the-badge&logo=mathworks&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
+### Frameworks & Tools
+<p align="center">
+  <a href="https://astro.build/"><img src="https://skillicons.dev/icons?i=astro" alt="Astro"/></a>
+  <a href="https://nodejs.org/"><img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js"/></a>
+  <a href="https://www.docker.com/"><img src="https://skillicons.dev/icons?i=docker" alt="Docker"/></a>
+  <a href="https://nginx.org/"><img src="https://skillicons.dev/icons?i=nginx" alt="Nginx"/></a>
+  <a href="https://www.linux.org/"><img src="https://skillicons.dev/icons?i=linux" alt="Linux"/></a>
+  <a href="https://git-scm.com/"><img src="https://skillicons.dev/icons?i=git" alt="Git"/></a>
+</p>
 
-</details>
-
-<details open>
-<summary><b>Frameworks & Tools</b></summary>
-<br/>
-
-![Astro](https://img.shields.io/badge/Astro-FF5D01?style=for-the-badge&logo=astro&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-
-</details>
-
-<details open>
-<summary><b>Infrastructure & Services</b></summary>
-<br/>
-
-![MikroTik](https://img.shields.io/badge/MikroTik-293239?style=for-the-badge&logo=mikrotik&logoColor=white)
-![Matrix](https://img.shields.io/badge/Matrix-000000?style=for-the-badge&logo=matrix&logoColor=white)
-![Mastodon](https://img.shields.io/badge/Mastodon-6364FF?style=for-the-badge&logo=mastodon&logoColor=white)
-![Home Assistant](https://img.shields.io/badge/Home_Assistant-41BDF5?style=for-the-badge&logo=home-assistant&logoColor=white)
-
-</details>
+### Infrastructure & Services
+<p align="center">
+  <a href="https://mikrotik.com/"><img src="https://cdn.simpleicons.org/mikrotik/293239" width="48" height="48" alt="MikroTik"/></a>
+  <a href="https://matrix.org/"><img src="https://skillicons.dev/icons?i=matrix" alt="Matrix"/></a>
+  <a href="https://joinmastodon.org/"><img src="https://skillicons.dev/icons?i=mastodon" alt="Mastodon"/></a>
+  <a href="https://www.home-assistant.io/"><img src="https://skillicons.dev/icons?i=homeassistant" alt="Home Assistant"/></a>
+</p>
 
 ## 📝 Latest Blog Posts
 
-<!-- BLOG-POST-LIST:START -->
-- 📄 [Serve Virtual Files with Nginx: Beyond the Document Root](https://jmrp.io/blog/serve-virtual-files-nginx/)
-  *Dec 18, 2025*
+<table>
+<tr>
+<td width="33%" valign="top">
 
-- 📄 [Mastering Content Security Policy &lpar;CSP&rpar; with Nginx: A Deep Dive](https://jmrp.io/blog/implementing-content-security-policy-nginx/)
-  *Dec 18, 2025*
+### [Serve Virtual Files with Nginx](https://jmrp.io/blog/serve-virtual-files-nginx/)
+Learn how to configure Nginx to serve dynamic or protected files like robots.txt without them physically existing in your web root.
 
-- 📄 [Securing Nginx with Client Certificates &lpar;mTLS&rpar;](https://jmrp.io/blog/secure-nginx-client-certificates/)
-  *Dec 16, 2025*
-<!-- BLOG-POST-LIST:END -->
+[Read more →](https://jmrp.io/blog/serve-virtual-files-nginx/)
 
-> 📚 [Read more on my blog →](https://jmrp.io/blog)
+</td>
+<td width="33%" valign="top">
 
-## 📊 GitHub Activity
+### [Mastering CSP with Nginx](https://jmrp.io/blog/implementing-content-security-policy-nginx/)
+A deep dive into implementing Content Security Policy with Nginx for enhanced web security.
+
+[Read more →](https://jmrp.io/blog/implementing-content-security-policy-nginx/)
+
+</td>
+<td width="33%" valign="top">
+
+### [Securing Nginx with mTLS](https://jmrp.io/blog/secure-nginx-client-certificates/)
+How to implement client certificate authentication (mTLS) with Nginx for secure connections.
+
+[Read more →](https://jmrp.io/blog/secure-nginx-client-certificates/)
+
+</td>
+</tr>
+</table>
+
+<p align="center">
+  <a href="https://jmrp.io/blog">
+    <img src="https://img.shields.io/badge/📚_Read_all_posts-667eea?style=for-the-badge" alt="Read all posts"/>
+  </a>
+</p>
+
+## 💻 Most Used Languages
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=jmrplens&theme=transparent&hide_border=true&date_format=M%20j%5B%2C%20Y%5D" alt="GitHub Streak" height="165"/>
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=jmrplens&theme=transparent" alt="Productive Time" height="165"/>
-</div>
-
-<div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=jmrplens&theme=transparent" alt="Profile Details" width="80%"/>
+  <img src="https://skillicons.dev/icons?i=cpp,c,python,matlab,js,bash&theme=dark" alt="Top Languages" />
 </div>
 
 ## 🔗 Connect With Me
 
 <div align="center">
-  <a href="https://jmrp.io">
-    <img src="assets/buttons/website.svg" alt="Website" height="50"/>
-  </a>
-  <a href="https://www.linkedin.com/in/jmrplens/">
-    <img src="assets/buttons/linkedin.svg" alt="LinkedIn" height="50"/>
-  </a>
-  <a href="https://mstdn.jmrp.io/@jmrplens">
-    <img src="assets/buttons/mastodon.svg" alt="Mastodon" height="50"/>
-  </a>
-  <a href="mailto:jmrplens@gmail.com">
-    <img src="assets/buttons/email.svg" alt="Email" height="50"/>
-  </a>
+  
+[![Website](https://img.shields.io/badge/🌐_Website-667eea?style=for-the-badge)](https://jmrp.io)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jmrplens/)
+[![Mastodon](https://img.shields.io/badge/Mastodon-6364FF?style=for-the-badge&logo=mastodon&logoColor=white)](https://mstdn.jmrp.io/@jmrplens)
+
 </div>
 
 ---
