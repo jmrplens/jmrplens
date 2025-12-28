@@ -70,8 +70,6 @@ How to implement client certificate authentication (mTLS) with Nginx for secure 
   </a>
 </p>
 
-## 📊 GitHub Statistics
-
 <div align="center">
   <img src="generated/github-stats-dark.svg#gh-dark-mode-only" alt="GitHub Statistics" width="100%"/>
   <img src="generated/github-stats-light.svg#gh-light-mode-only" alt="GitHub Statistics" width="100%"/>

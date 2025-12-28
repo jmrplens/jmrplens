@@ -163,7 +163,7 @@ def generate_svg(stats, theme='dark'):
   <rect width="{width}" height="{height}" rx="10" fill="{bg_fill}" stroke="{bg_stroke}" stroke-width="1" fill-opacity="0.8"/>
   
   <!-- Title -->
-  <text class="title" x="25" y="35">📊 GitHub Statistics</text>
+  <text class="title" x="25" y="35">GitHub Statistics</text>
   
   <!-- Stats Grid -->
   <g transform="translate(25, 60)">
@@ -188,7 +188,7 @@ def generate_svg(stats, theme='dark'):
   <line x1="25" y1="130" x2="{width-25}" y2="130" stroke="{divider_stroke}" stroke-width="1"/>
   
   <!-- Languages Title -->
-  <text class="title" x="25" y="165">💻 Most Used Languages</text>
+  <text class="title" x="25" y="165">Most Used Languages</text>
   
   <!-- Languages List -->
   <g transform="translate(25, 180)">
