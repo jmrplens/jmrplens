@@ -38,8 +38,10 @@ def fetch_github_stats():
         for lang, bytes_count in lang_data.items():
             languages_bytes[lang] = languages_bytes.get(lang, 0) + bytes_count
     
-    # Sort and get top 8 languages with lines of code
-    sorted_langs = sorted(languages_bytes.items(), key=lambda x: x[1], reverse=True)[:8]
+    # Sort and get top 8 languages with lines of code, filtering out Pascal
+    sorted_langs = sorted(languages_bytes.items(), key=lambda x: x[1], reverse=True)
+    # Filter out Pascal and get top 8
+    sorted_langs = [(lang, bytes) for lang, bytes in sorted_langs if lang != 'Pascal'][:8]
     total_bytes = sum(languages_bytes.values())
     
     # Estimate lines (50 bytes per line average)
@@ -76,27 +78,44 @@ LANG_COLORS = {
     'Makefile': '#427819',
 }
 
+def load_lang_icon(lang):
+    """Load language icon from file or return fallback"""
+    icon_map = {
+        'MATLAB': 'matlab',
+        'C': 'c',
+        'C++': 'cpp',
+        'Python': 'python',
+        'JavaScript': 'javascript',
+        'HTML': 'html',
+        'CSS': 'css',
+        'TeX': 'tex',
+        'Astro': 'astro',
+        'Shell': 'shell',
+        'TypeScript': 'typescript',
+    }
+    
+    if lang in icon_map:
+        icon_file = f'assets/icons/lang/{icon_map[lang]}.svg'
+        if os.path.exists(icon_file):
+            with open(icon_file, 'r') as f:
+                content = f.read()
+                # Extract the SVG content (remove xml declaration and outer svg tag)
+                if '<svg' in content and '</svg>' in content:
+                    start = content.find('<svg')
+                    end = content.find('>', start) + 1
+                    close = content.rfind('</svg>')
+                    inner = content[end:close].strip()
+                    return inner
+    
+    # Fallback: simple colored circle
+    color = LANG_COLORS.get(lang, '#858585')
+    return f'<circle cx="12" cy="12" r="10" fill="{color}"/>'
+
 def generate_svg(stats):
     """Generate SVG with GitHub statistics"""
     
     width = 800
     height = 500  # Increased for 8 languages
-    
-    # Language icon paths (simplified inline SVG paths)
-    lang_icons = {
-        'MATLAB': '<path d="M0 0h24v24H0z" fill="#e16737"/><text x="12" y="17" fill="white" font-size="14" font-family="monospace" text-anchor="middle" font-weight="bold">M</text>',
-        'C': '<circle cx="12" cy="12" r="10" fill="#555555"/><text x="12" y="17" fill="white" font-size="14" font-family="monospace" text-anchor="middle" font-weight="bold">C</text>',
-        'C++': '<circle cx="12" cy="12" r="10" fill="#f34b7d"/><text x="12" y="17" fill="white" font-size="12" font-family="monospace" text-anchor="middle" font-weight="bold">C++</text>',
-        'Python': '<circle cx="12" cy="12" r="10" fill="#3572A5"/><path d="M9 8.5c0-.8.7-1.5 1.5-1.5h3c.8 0 1.5.7 1.5 1.5v7c0 .8-.7 1.5-1.5 1.5h-3c-.8 0-1.5-.7-1.5-1.5v-7z" fill="#ffd43b"/>',
-        'JavaScript': '<rect x="2" y="2" width="20" height="20" rx="2" fill="#f7df1e"/><text x="12" y="17" fill="#000" font-size="14" font-family="monospace" text-anchor="middle" font-weight="bold">JS</text>',
-        'HTML': '<circle cx="12" cy="12" r="10" fill="#e34c26"/><text x="12" y="17" fill="white" font-size="10" font-family="monospace" text-anchor="middle" font-weight="bold">HTML</text>',
-        'CSS': '<circle cx="12" cy="12" r="10" fill="#563d7c"/><text x="12" y="17" fill="white" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">CSS</text>',
-        'Pascal': '<circle cx="12" cy="12" r="10" fill="#E3F171"/><text x="12" y="17" fill="#000" font-size="12" font-family="monospace" text-anchor="middle" font-weight="bold">P</text>',
-        'TeX': '<circle cx="12" cy="12" r="10" fill="#3D6117"/><text x="12" y="17" fill="white" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">TeX</text>',
-        'Astro': '<circle cx="12" cy="12" r="10" fill="#FF5D01"/><text x="12" y="17" fill="white" font-size="12" font-family="monospace" text-anchor="middle" font-weight="bold">A</text>',
-        'Shell': '<circle cx="12" cy="12" r="10" fill="#89e051"/><text x="12" y="17" fill="#000" font-size="12" font-family="monospace" text-anchor="middle" font-weight="bold">$</text>',
-        'TypeScript': '<rect x="2" y="2" width="20" height="20" rx="2" fill="#2b7489"/><text x="12" y="17" fill="white" font-size="14" font-family="monospace" text-anchor="middle" font-weight="bold">TS</text>',
-    }
     
     svg = f'''<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" xmlns="http://www.w3.org/2000/svg">
   <defs>
@@ -173,8 +192,8 @@ def generate_svg(stats):
         color = LANG_COLORS.get(lang, '#858585')
         bar_width = (percent / 100) * 500
         
-        # Get icon or use default circle
-        icon_svg = lang_icons.get(lang, f'<circle cx="12" cy="12" r="10" fill="{color}"/>')
+        # Load icon from file or use fallback
+        icon_svg = load_lang_icon(lang)
         
         svg += f'''    <!-- {lang} -->
     <g transform="translate(0, {y_offset})">
