@@ -132,6 +132,7 @@ def generate_svg(stats):
       .stat-value {{ font: 700 24px 'Segoe UI', Ubuntu, sans-serif; }}
       .lang-name {{ font: 400 13px 'Segoe UI', Ubuntu, sans-serif; }}
       .lang-lines {{ font: 600 12px 'Segoe UI', Ubuntu, sans-serif; }}
+      .lang-icon {{ filter: none; }}
       
       @media (prefers-color-scheme: light) {{
         .bg {{ fill: #ffffff; stroke: #e1e4e8; }}
@@ -151,6 +152,7 @@ def generate_svg(stats):
         .lang-name {{ fill: #8b949e; }}
         .lang-lines {{ fill: #c9d1d9; }}
         .divider {{ stroke: #30363d; }}
+        .lang-icon {{ filter: invert(1) brightness(1.2); }}
       }}
     </style>
   </defs>
