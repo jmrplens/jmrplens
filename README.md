@@ -51,8 +51,7 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 
 ## 📝 Latest Blog Posts
 
-<!-- BLOG-POST-LIST:START -->
-<!-- BLOG-POST-LIST:END -->
+<!-- BLOG-POST-LIST:START -->- [Serve Virtual Files with Nginx: Beyond the Document Root](https://jmrp.io/blog/serve-virtual-files-nginx/) - *Dec 18, 2025*- [Mastering Content Security Policy &lpar;CSP&rpar; with Nginx: A Deep Dive](https://jmrp.io/blog/implementing-content-security-policy-nginx/) - *Dec 18, 2025*- [Securing Nginx with Client Certificates &lpar;mTLS&rpar;](https://jmrp.io/blog/secure-nginx-client-certificates/) - *Dec 16, 2025*<!-- BLOG-POST-LIST:END -->
 
 > 📚 [Read more on my blog →](https://jmrp.io/blog)
 
