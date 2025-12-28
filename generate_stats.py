@@ -204,10 +204,10 @@ def generate_svg(stats, theme='dark'):
         
         svg += f'''    <!-- {lang} -->
     <g transform="translate(0, {y_offset})">
-      <svg x="0" y="-2" width="32" height="32" viewBox="0 0 24 24">
+      <svg class="lang-icon" x="0" y="0" width="24" height="24" viewBox="0 0 24 24">
         {icon_svg}
       </svg>
-      <text class="lang-name" x="38" y="16">{lang}</text>
+      <text class="lang-name" x="30" y="16">{lang}</text>
       <rect x="120" y="6" width="{bar_width}" height="12" rx="6" fill="{color}" opacity="0.8"/>
       <text class="lang-lines" x="{120 + bar_width + 10}" y="16">{lines:,} lines</text>
     </g>
