@@ -62,11 +62,15 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 
 > 📚 [Read more on my blog →](https://jmrp.io/blog)
 
-## 📊 GitHub Stats
+## 📊 GitHub Activity
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=jmrplens&show_icons=true&theme=transparent&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" height="165"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jmrplens&layout=compact&theme=transparent&hide_border=true&langs_count=8" alt="Top Languages" height="165"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=jmrplens&theme=transparent&hide_border=true&date_format=M%20j%5B%2C%20Y%5D" alt="GitHub Streak" height="165"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=jmrplens&theme=transparent" alt="Productive Time" height="165"/>
+</div>
+
+<div align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=jmrplens&theme=transparent" alt="Profile Details" width="80%"/>
 </div>
 
 ## 🔗 Connect With Me
