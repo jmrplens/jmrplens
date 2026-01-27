@@ -40,26 +40,26 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 <tr>
 <td width="33%" valign="top">
 
-### [Serve Virtual Files with Nginx](https://jmrp.io/blog/serve-virtual-files-nginx/)
-Learn how to configure Nginx to serve dynamic or protected files like robots.txt without them physically existing in your web root.
+### [MikroTik Honeypot: Trap & Auto-Block Port Scanners](https://jmrp.io/blog/implementing-mikrotik-honeypot/)
+Learn how to configure your MikroTik router as a low-interaction honeypot to detect port scanners, log malicious activity, and automatically block ...
 
-[Read more →](https://jmrp.io/blog/serve-virtual-files-nginx/)
-
-</td>
-<td width="33%" valign="top">
-
-### [Mastering CSP with Nginx](https://jmrp.io/blog/implementing-content-security-policy-nginx/)
-A deep dive into implementing Content Security Policy with Nginx for enhanced web security.
-
-[Read more →](https://jmrp.io/blog/implementing-content-security-policy-nginx/)
+[Read more →](https://jmrp.io/blog/implementing-mikrotik-honeypot/)
 
 </td>
 <td width="33%" valign="top">
 
-### [Securing Nginx with mTLS](https://jmrp.io/blog/secure-nginx-client-certificates/)
-How to implement client certificate authentication (mTLS) with Nginx for secure connections.
+### [Implementing a Tarpit in Nginx: Trap Malicious Scanners](https://jmrp.io/blog/implementing-tarpit-nginx/)
+Learn how to implement a tarpit in Nginx to slow down and trap malicious bots, vulnerability scanners, and brute-force attackers. Complete guide wi...
 
-[Read more →](https://jmrp.io/blog/secure-nginx-client-certificates/)
+[Read more →](https://jmrp.io/blog/implementing-tarpit-nginx/)
+
+</td>
+<td width="33%" valign="top">
+
+### [Mastering QUIC and HTTP/3 with Nginx: The Complete Guide](https://jmrp.io/blog/004-enabling-quic-http3-nginx/)
+A comprehensive deep-dive into the QUIC protocol and HTTP/3. Learn the technical architecture, security features, and step-by-step Nginx configurat...
+
+[Read more →](https://jmrp.io/blog/004-enabling-quic-http3-nginx/)
 
 </td>
 </tr>
