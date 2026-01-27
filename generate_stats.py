@@ -231,6 +231,7 @@ BLOG_RSS_URL = 'https://jmrp.io/rss.xml'
 README_PATH = 'README.md'
 BLOG_START_MARKER = '<!-- BLOG-POSTS:START -->'
 BLOG_END_MARKER = '<!-- BLOG-POSTS:END -->'
+MAX_DESCRIPTION_LENGTH = 150
 
 
 def fetch_blog_posts(num_posts=3):
@@ -298,15 +299,15 @@ def generate_blog_posts_markdown(posts):
         # Remove HTML tags
         clean = re.sub(r'<[^>]+>', '', desc)
         # Limit length and add ellipsis if needed
-        if len(clean) > 150:
-            clean = clean[:147] + '...'
+        if len(clean) > MAX_DESCRIPTION_LENGTH:
+            clean = clean[:MAX_DESCRIPTION_LENGTH - 3] + '...'
         return clean.strip()
     
     markdown = '''<table>
 <tr>
 '''
     
-    for i, post in enumerate(posts[:3]):
+    for post in posts[:3]:
         title = post['title']
         link = post['link']
         description = clean_description(post['description'])
