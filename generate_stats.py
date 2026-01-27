@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """
-Generate GitHub statistics SVG
+Generate GitHub statistics SVG and update blog posts
 Fetches real data from GitHub API and creates a custom SVG visualization
+Also fetches latest blog posts from RSS feed and updates README
 """
 
 import os
+import re
 import requests
+import xml.etree.ElementTree as ET
 from datetime import datetime
 
 # GitHub API configuration
@@ -222,6 +225,153 @@ def generate_svg(stats, theme='dark'):
     
     return svg
 
+
+# Blog posts configuration
+BLOG_RSS_URL = 'https://jmrp.io/rss.xml'
+README_PATH = 'README.md'
+BLOG_START_MARKER = '<!-- BLOG-POSTS:START -->'
+BLOG_END_MARKER = '<!-- BLOG-POSTS:END -->'
+MAX_DESCRIPTION_LENGTH = 150
+
+
+def fetch_blog_posts(num_posts=3):
+    """Fetch latest blog posts from RSS feed"""
+    try:
+        response = requests.get(BLOG_RSS_URL, timeout=30)
+        response.raise_for_status()
+        
+        # Parse RSS XML
+        root = ET.fromstring(response.content)
+        
+        # Handle different RSS formats (RSS 2.0 and Atom)
+        posts = []
+        
+        # Try RSS 2.0 format first
+        items = root.findall('.//item')
+        if items:
+            for item in items[:num_posts]:
+                title = item.find('title')
+                link = item.find('link')
+                description = item.find('description')
+                
+                if title is not None and link is not None:
+                    posts.append({
+                        'title': title.text or '',
+                        'link': link.text or '',
+                        'description': (description.text or '')[:200] if description is not None else ''
+                    })
+        
+        # Try Atom format if RSS 2.0 didn't work
+        if not posts:
+            ns = {'atom': 'http://www.w3.org/2005/Atom'}
+            entries = root.findall('.//atom:entry', ns) or root.findall('.//entry')
+            for entry in entries[:num_posts]:
+                title = entry.find('atom:title', ns) or entry.find('title')
+                link = entry.find('atom:link', ns) or entry.find('link')
+                summary = entry.find('atom:summary', ns) or entry.find('summary')
+                
+                if title is not None:
+                    link_href = link.get('href') if link is not None else ''
+                    if not link_href and link is not None:
+                        link_href = link.text or ''
+                    posts.append({
+                        'title': title.text or '',
+                        'link': link_href,
+                        'description': (summary.text or '')[:200] if summary is not None else ''
+                    })
+        
+        return posts
+    except requests.RequestException as e:
+        print(f"⚠️  Error fetching RSS feed: {e}")
+        return []
+    except ET.ParseError as e:
+        print(f"⚠️  Error parsing RSS feed: {e}")
+        return []
+
+
+def generate_blog_posts_markdown(posts):
+    """Generate markdown for blog posts table"""
+    if not posts:
+        return None
+    
+    # Clean up descriptions - remove HTML tags and limit length
+    def clean_description(desc):
+        # Remove HTML tags
+        clean = re.sub(r'<[^>]+>', '', desc)
+        # Limit length and add ellipsis if needed
+        if len(clean) > MAX_DESCRIPTION_LENGTH:
+            clean = clean[:MAX_DESCRIPTION_LENGTH - 3] + '...'
+        return clean.strip()
+    
+    markdown = '''<table>
+<tr>
+'''
+    
+    for post in posts[:3]:
+        title = post['title']
+        link = post['link']
+        description = clean_description(post['description'])
+        
+        markdown += f'''<td width="33%" valign="top">
+
+### [{title}]({link})
+{description}
+
+[Read more →]({link})
+
+</td>
+'''
+    
+    markdown += '''</tr>
+</table>
+
+<p align="center">
+  <a href="https://jmrp.io/blog">
+    <img src="https://img.shields.io/badge/📚_Read_all_posts-667eea?style=for-the-badge" alt="Read all posts"/>
+  </a>
+</p>'''
+    
+    return markdown
+
+
+def update_readme_blog_posts(posts):
+    """Update README.md with latest blog posts"""
+    if not posts:
+        print("⚠️  No blog posts to update")
+        return False
+    
+    if not os.path.exists(README_PATH):
+        print(f"⚠️  README not found at {README_PATH}")
+        return False
+    
+    with open(README_PATH, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    # Check if markers exist
+    if BLOG_START_MARKER not in content or BLOG_END_MARKER not in content:
+        print("⚠️  Blog posts markers not found in README")
+        return False
+    
+    # Generate new blog posts markdown
+    new_posts_md = generate_blog_posts_markdown(posts)
+    if not new_posts_md:
+        return False
+    
+    # Replace content between markers
+    pattern = re.escape(BLOG_START_MARKER) + r'.*?' + re.escape(BLOG_END_MARKER)
+    replacement = f'{BLOG_START_MARKER}\n{new_posts_md}\n{BLOG_END_MARKER}'
+    new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
+    
+    # Check if content changed
+    if new_content == content:
+        print("ℹ️  Blog posts are already up to date")
+        return False
+    
+    with open(README_PATH, 'w', encoding='utf-8') as f:
+        f.write(new_content)
+    
+    return True
+
 if __name__ == '__main__':
     print("Fetching GitHub statistics...")
     stats = fetch_github_stats()
@@ -247,3 +397,19 @@ if __name__ == '__main__':
     print("✅ Created generated/github-stats-light.svg")
     
     print("\n✨ Both stat themes generated successfully!")
+    
+    # Update blog posts
+    print("\n📝 Fetching latest blog posts...")
+    posts = fetch_blog_posts(num_posts=3)
+    
+    if posts:
+        print(f"  - Found {len(posts)} posts")
+        for post in posts:
+            print(f"    • {post['title']}")
+        
+        if update_readme_blog_posts(posts):
+            print("✅ README updated with latest blog posts")
+        else:
+            print("ℹ️  No changes needed for blog posts")
+    else:
+        print("⚠️  Could not fetch blog posts - README unchanged")

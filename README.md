@@ -35,6 +35,7 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 
 ## 📝 Latest Blog Posts
 
+<!-- BLOG-POSTS:START -->
 <table>
 <tr>
 <td width="33%" valign="top">
@@ -69,6 +70,7 @@ How to implement client certificate authentication (mTLS) with Nginx for secure 
     <img src="https://img.shields.io/badge/📚_Read_all_posts-667eea?style=for-the-badge" alt="Read all posts"/>
   </a>
 </p>
+<!-- BLOG-POSTS:END -->
 
 <div align="center">
   <img src="generated/github-stats-dark.svg#gh-dark-mode-only" alt="GitHub Statistics" width="100%"/>
