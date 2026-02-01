@@ -40,6 +40,14 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 <tr>
 <td width="33%" valign="top">
 
+### [Component Library Demo](https://jmrp.io/blog/999-testing-components/)
+Demo page showcasing all UI components available for blog posts.
+
+[Read more →](https://jmrp.io/blog/999-testing-components/)
+
+</td>
+<td width="33%" valign="top">
+
 ### [MikroTik Honeypot: Trap & Auto-Block Port Scanners](https://jmrp.io/blog/implementing-mikrotik-honeypot/)
 Learn how to configure your MikroTik router as a low-interaction honeypot to detect port scanners, log malicious activity, and automatically block ...
 
@@ -52,14 +60,6 @@ Learn how to configure your MikroTik router as a low-interaction honeypot to det
 Learn how to implement a tarpit in Nginx to slow down and trap malicious bots, vulnerability scanners, and brute-force attackers. Complete guide wi...
 
 [Read more →](https://jmrp.io/blog/implementing-tarpit-nginx/)
-
-</td>
-<td width="33%" valign="top">
-
-### [Mastering QUIC and HTTP/3 with Nginx: The Complete Guide](https://jmrp.io/blog/004-enabling-quic-http3-nginx/)
-A comprehensive deep-dive into the QUIC protocol and HTTP/3. Learn the technical architecture, security features, and step-by-step Nginx configurat...
-
-[Read more →](https://jmrp.io/blog/004-enabling-quic-http3-nginx/)
 
 </td>
 </tr>
