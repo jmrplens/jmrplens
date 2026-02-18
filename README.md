@@ -40,26 +40,26 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 <tr>
 <td width="33%" valign="top">
 
-### [MikroTik PPPoE + DHCPv6-PD: Dual-Stack for DIGI Spain](https://jmrp.io/blog/mikrotik-pppoe-dualstack-digi/)
+### [MikroTik PPPoE + DHCPv6-PD: Dual-Stack for DIGI Spain](https://jmrp.io/blog/008-mikrotik-pppoe-dualstack-digi/)
 Configure PPPoE with DHCPv6 Prefix Delegation on MikroTik RouterOS for DIGI Spain. VLAN tagging, SLAAC, prefix change handling, and firewall rules.
 
-[Read more →](https://jmrp.io/blog/mikrotik-pppoe-dualstack-digi/)
+[Read more →](https://jmrp.io/blog/008-mikrotik-pppoe-dualstack-digi/)
 
 </td>
 <td width="33%" valign="top">
 
-### [MikroTik WireGuard VPN: Complete Dual-Stack IPv4/IPv6 Configuration](https://jmrp.io/blog/mikrotik-wireguard-dual-stack-vpn/)
+### [MikroTik WireGuard VPN: Complete Dual-Stack IPv4/IPv6 Configuration](https://jmrp.io/blog/007-mikrotik-wireguard-dual-stack-vpn/)
 Configure WireGuard VPN on MikroTik RouterOS with full IPv4/IPv6 dual-stack. Access your home network with native IPv6 from any connection.
 
-[Read more →](https://jmrp.io/blog/mikrotik-wireguard-dual-stack-vpn/)
+[Read more →](https://jmrp.io/blog/007-mikrotik-wireguard-dual-stack-vpn/)
 
 </td>
 <td width="33%" valign="top">
 
-### [MikroTik Honeypot: Trap & Auto-Block Port Scanners](https://jmrp.io/blog/implementing-mikrotik-honeypot/)
+### [MikroTik Honeypot: Trap & Auto-Block Port Scanners](https://jmrp.io/blog/006-implementing-mikrotik-honeypot/)
 Configure a MikroTik honeypot to detect port scanners, log malicious activity, and auto-block attackers using firewall address lists and the RAW ta...
 
-[Read more →](https://jmrp.io/blog/implementing-mikrotik-honeypot/)
+[Read more →](https://jmrp.io/blog/006-implementing-mikrotik-honeypot/)
 
 </td>
 </tr>
