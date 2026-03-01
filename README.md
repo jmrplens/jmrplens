@@ -40,6 +40,14 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 <tr>
 <td width="33%" valign="top">
 
+### [Designing a CrowdSec Bouncer: Architecture, Decisions, and Metrics](https://jmrp.io/blog/designing-crowdsec-bouncer/)
+A didactic guide to designing CrowdSec bouncers: LAPI connectivity, decision processing, remediation patterns, metrics reporting, and reconciliation.
+
+[Read more →](https://jmrp.io/blog/designing-crowdsec-bouncer/)
+
+</td>
+<td width="33%" valign="top">
+
 ### [MikroTik PPPoE + DHCPv6-PD: Dual-Stack for DIGI Spain](https://jmrp.io/blog/008-mikrotik-pppoe-dualstack-digi/)
 Configure PPPoE with DHCPv6 Prefix Delegation on MikroTik RouterOS for DIGI Spain. VLAN tagging, SLAAC, prefix change handling, and firewall rules.
 
@@ -52,14 +60,6 @@ Configure PPPoE with DHCPv6 Prefix Delegation on MikroTik RouterOS for DIGI Spai
 Configure WireGuard VPN on MikroTik RouterOS with full IPv4/IPv6 dual-stack. Access your home network with native IPv6 from any connection.
 
 [Read more →](https://jmrp.io/blog/007-mikrotik-wireguard-dual-stack-vpn/)
-
-</td>
-<td width="33%" valign="top">
-
-### [MikroTik Honeypot: Trap & Auto-Block Port Scanners](https://jmrp.io/blog/006-implementing-mikrotik-honeypot/)
-Configure a MikroTik honeypot to detect port scanners, log malicious activity, and auto-block attackers using firewall address lists and the RAW ta...
-
-[Read more →](https://jmrp.io/blog/006-implementing-mikrotik-honeypot/)
 
 </td>
 </tr>
