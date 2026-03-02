@@ -41,7 +41,7 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 <td width="33%" valign="top">
 
 ### [Designing a CrowdSec Bouncer: Architecture, Decisions, and Metrics](https://jmrp.io/blog/designing-crowdsec-bouncer/)
-A didactic guide to designing CrowdSec bouncers: LAPI connectivity, decision processing, remediation patterns, metrics reporting, and reconciliation.
+A deep dive into CrowdSec bouncer design: LAPI protocol, decision processing, remediation patterns, delta metrics, and reconciliation.
 
 [Read more →](https://jmrp.io/blog/designing-crowdsec-bouncer/)
 
