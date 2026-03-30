@@ -40,10 +40,10 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 <tr>
 <td width="33%" valign="top">
 
-### [Designing a CrowdSec Bouncer: Architecture, Decisions, and Metrics](https://jmrp.io/blog/009-designing-crowdsec-bouncer/)
-A deep dive into CrowdSec bouncer design: LAPI protocol, decision processing, remediation patterns, delta metrics, and reconciliation.
+### [Running a Tor Bridge on Linux: The Complete Guide to obfs4 and WebTunnel](https://jmrp.io/blog/009-running-tor-bridge/)
+A comprehensive guide to contributing to the Tor network by running obfs4 and WebTunnel bridges on Linux. Covers onion routing theory, full install...
 
-[Read more →](https://jmrp.io/blog/009-designing-crowdsec-bouncer/)
+[Read more →](https://jmrp.io/blog/009-running-tor-bridge/)
 
 </td>
 <td width="33%" valign="top">
