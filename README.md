@@ -40,8 +40,8 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 <tr>
 <td width="33%" valign="top">
 
-### [Running a Tor Bridge on Linux: The Complete Guide to obfs4 and WebTunnel](https://jmrp.io/blog/009-running-tor-bridge/)
-A comprehensive guide to contributing to the Tor network by running obfs4 and WebTunnel bridges on Linux. Covers onion routing theory, full install...
+### [Running a Tor Bridge on Linux: Complete obfs4 & WebTunnel Guide](https://jmrp.io/blog/009-running-tor-bridge/)
+Guide to running obfs4 and WebTunnel Tor bridges on Linux with Nginx camouflage, firewall hardening, Prometheus monitoring, and CrowdSec.
 
 [Read more →](https://jmrp.io/blog/009-running-tor-bridge/)
 
