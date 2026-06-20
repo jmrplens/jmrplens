@@ -40,6 +40,14 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 <tr>
 <td width="33%" valign="top">
 
+### [What the Linker Won't Do: Packing i18n Strings on an MCU](https://jmrp.io/blog/010-packed-i18n-string-pool/)
+A build-time generator packs firmware UI translations into a tail-merged string pool with uint16 offsets, halving the index table on a 32-bit MCU.
+
+[Read more →](https://jmrp.io/blog/010-packed-i18n-string-pool/)
+
+</td>
+<td width="33%" valign="top">
+
 ### [Running a Tor Bridge on Linux: Complete obfs4 & WebTunnel Guide](https://jmrp.io/blog/009-running-tor-bridge/)
 Guide to running obfs4 and WebTunnel Tor bridges on Linux with Nginx camouflage, firewall hardening, Prometheus monitoring, and CrowdSec.
 
@@ -52,14 +60,6 @@ Guide to running obfs4 and WebTunnel Tor bridges on Linux with Nginx camouflage,
 Configure PPPoE with DHCPv6 Prefix Delegation on MikroTik RouterOS for DIGI Spain. VLAN tagging, SLAAC, prefix change handling, and firewall rules.
 
 [Read more →](https://jmrp.io/blog/008-mikrotik-pppoe-dualstack-digi/)
-
-</td>
-<td width="33%" valign="top">
-
-### [MikroTik WireGuard VPN: Complete Dual-Stack IPv4/IPv6 Configuration](https://jmrp.io/blog/007-mikrotik-wireguard-dual-stack-vpn/)
-Configure WireGuard VPN on MikroTik RouterOS with full IPv4/IPv6 dual-stack. Access your home network with native IPv6 from any connection.
-
-[Read more →](https://jmrp.io/blog/007-mikrotik-wireguard-dual-stack-vpn/)
 
 </td>
 </tr>
