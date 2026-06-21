@@ -41,7 +41,7 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 <td width="33%" valign="top">
 
 ### [What the Linker Won't Do: Packing i18n Strings on an MCU](https://jmrp.io/blog/010-packed-i18n-string-pool/)
-A build-time generator packs firmware UI translations into a tail-merged string pool with uint16 offsets, halving the index table on a 32-bit MCU.
+A build-time generator packs firmware UI translations into one string pool indexed by uint16 offsets, halving the index table on a 32-bit MCU.
 
 [Read more →](https://jmrp.io/blog/010-packed-i18n-string-pool/)
 
