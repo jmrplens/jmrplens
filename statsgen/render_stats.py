@@ -1,7 +1,7 @@
 """Render del panel de estadísticas como SVG temático."""
 from datetime import datetime
 
-from statsgen.theme import THEMES, LANG_COLORS, load_lang_icon
+from statsgen.theme import THEMES, LANG_COLORS
 
 WIDTH = 800
 
@@ -36,13 +36,12 @@ def render_stats_svg(lang_pcts, activity, theme):
     for lang, pct in lang_pcts:
         color = LANG_COLORS.get(lang, "#858585")
         bar = (pct / 100) * 480
-        icon = load_lang_icon(lang)
         lang_rows.append(
             f'<g transform="translate(0, {y})">'
-            f'<svg class="lang-icon" x="0" y="0" width="22" height="22" viewBox="0 0 24 24">{icon}</svg>'
-            f'<text class="lang-name" x="30" y="15">{lang}</text>'
-            f'<rect x="130" y="5" width="{bar:.1f}" height="12" rx="6" fill="{color}" opacity="0.85"/>'
-            f'<text class="lang-pct" x="{130 + bar + 8:.1f}" y="15">{pct:.0f}%</text>'
+            f'<circle cx="7" cy="9" r="6.5" fill="{color}"/>'
+            f'<text class="lang-name" x="22" y="14">{lang}</text>'
+            f'<rect x="130" y="3" width="{bar:.1f}" height="12" rx="6" fill="{color}" opacity="0.85"/>'
+            f'<text class="lang-pct" x="{130 + bar + 8:.1f}" y="14">{pct:.0f}%</text>'
             f"</g>"
         )
         y += 34
@@ -60,7 +59,6 @@ def render_stats_svg(lang_pcts, activity, theme):
       .lang-name {{ font: 400 13px 'Segoe UI', Ubuntu, sans-serif; fill: {t['name']}; }}
       .lang-pct {{ font: 600 12px 'Segoe UI', Ubuntu, sans-serif; fill: {t['accent']}; }}
       .footer {{ font: 400 11px 'Segoe UI', Ubuntu, sans-serif; fill: {t['label']}; }}
-      .lang-icon {{ filter: {t['icon_filter']}; }}
     </style>
   </defs>
   <rect width="{WIDTH}" height="{height}" rx="10" fill="{t['bg']}" stroke="{t['bg_stroke']}" stroke-width="1"/>
