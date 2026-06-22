@@ -40,26 +40,26 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 <tr>
 <td width="33%" valign="top">
 
+### [Your 4-Digit PIN Is Fine: Device-Bound Keys on ESP32-S3](https://jmrp.io/blog/012-device-bound-key-derivation/)
+Why PBKDF2 iterations can't protect a 4-digit PIN on a microcontroller, and how an eFuse-HMAC device secret plus HKDF stops offline brute force.
+
+[Read more →](https://jmrp.io/blog/012-device-bound-key-derivation/)
+
+</td>
+<td width="33%" valign="top">
+
+### [A Vault File That Fails Closed: Encrypt-then-MAC on an MCU](https://jmrp.io/blog/011-encrypt-then-mac-vault/)
+How a hardware password manager authenticates every vault file before it decrypts: encrypt-then-MAC, verify-before-decrypt, and fail-closed reads.
+
+[Read more →](https://jmrp.io/blog/011-encrypt-then-mac-vault/)
+
+</td>
+<td width="33%" valign="top">
+
 ### [What the Linker Won't Do: Packing i18n Strings on an MCU](https://jmrp.io/blog/010-packed-i18n-string-pool/)
 A build-time generator packs firmware UI translations into one string pool indexed by uint16 offsets, halving the index table on a 32-bit MCU.
 
 [Read more →](https://jmrp.io/blog/010-packed-i18n-string-pool/)
-
-</td>
-<td width="33%" valign="top">
-
-### [Running a Tor Bridge on Linux: Complete obfs4 & WebTunnel Guide](https://jmrp.io/blog/009-running-tor-bridge/)
-Guide to running obfs4 and WebTunnel Tor bridges on Linux with Nginx camouflage, firewall hardening, Prometheus monitoring, and CrowdSec.
-
-[Read more →](https://jmrp.io/blog/009-running-tor-bridge/)
-
-</td>
-<td width="33%" valign="top">
-
-### [MikroTik PPPoE + DHCPv6-PD: Dual-Stack for DIGI Spain](https://jmrp.io/blog/008-mikrotik-pppoe-dualstack-digi/)
-Configure PPPoE with DHCPv6 Prefix Delegation on MikroTik RouterOS for DIGI Spain. VLAN tagging, SLAAC, prefix change handling, and firewall rules.
-
-[Read more →](https://jmrp.io/blog/008-mikrotik-pppoe-dualstack-digi/)
 
 </td>
 </tr>
