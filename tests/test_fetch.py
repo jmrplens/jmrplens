@@ -63,3 +63,28 @@ def test_fetch_blog_posts_parses_rss(monkeypatch):
     assert [p["title"] for p in posts] == ["Post A", "Post B"]
     assert posts[0]["link"] == "https://jmrp.io/blog/a/"
     assert posts[0]["date"] == "Jun 2026"
+
+
+def test_fetch_traffic_sums_views_and_clones(monkeypatch):
+    class FakeResp:
+        def __init__(self, count):
+            self.status_code = 200
+            self._c = count
+        def json(self):
+            return {"count": self._c}
+
+    def fake_get(url, **kw):
+        return FakeResp(10) if url.endswith("/views") else FakeResp(100)
+
+    monkeypatch.setattr(fetch.requests, "get", fake_get)
+    out = fetch.fetch_traffic("tok", ["a/x", "a/y"])
+    assert out == {"views_14d": 20, "clones_14d": 200}
+
+
+def test_fetch_traffic_skips_inaccessible_repos(monkeypatch):
+    class FakeResp:
+        status_code = 403
+        def json(self):
+            return {}
+    monkeypatch.setattr(fetch.requests, "get", lambda *a, **k: FakeResp())
+    assert fetch.fetch_traffic("tok", ["a/x"]) == {"views_14d": 0, "clones_14d": 0}

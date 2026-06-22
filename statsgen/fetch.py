@@ -23,6 +23,8 @@ STATS_QUERY = """query {
   viewer {
     repositories(isFork: false, ownerAffiliations: OWNER, first: 100) {
       nodes {
+        nameWithOwner
+        isArchived
         languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
           edges { size node { name } }
         }
@@ -60,6 +62,29 @@ def fetch_stats(token):
     }
     language_repos = data["viewer"]["repositories"]["nodes"]
     return activity, language_repos
+
+
+def fetch_traffic(token, repo_full_names):
+    """Suma vistas y clones de los últimos 14 días (GitHub Traffic API) entre
+    todos los repos dados. Requiere push (el token admin lo tiene). Los repos
+    inaccesibles se ignoran sin romper el agregado.
+
+    Devuelve {"views_14d": int, "clones_14d": int}.
+    """
+    headers = {"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"}
+    totals = {"views_14d": 0, "clones_14d": 0}
+    for full in repo_full_names:
+        for kind, key in (("views", "views_14d"), ("clones", "clones_14d")):
+            try:
+                r = requests.get(
+                    f"https://api.github.com/repos/{full}/traffic/{kind}",
+                    headers=headers, timeout=20,
+                )
+                if r.status_code == 200:
+                    totals[key] += r.json().get("count", 0)
+            except requests.RequestException:
+                continue
+    return totals
 
 
 def _fmt_date(raw):

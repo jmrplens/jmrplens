@@ -1,11 +1,9 @@
 """Panel de estadísticas como una caja nativa de GitHub (Primer).
 
-Cabecera con título + un sutil oscilograma (guiño a acústica/DSP), fila de
-métricas reales con los números en monoespaciada (estética de readout de
-instrumento), y los lenguajes como barra segmentada full-width + leyenda en
-dos columnas. Sin números inventados.
+Cabecera con título, fila de métricas reales con los números en monoespaciada
+(estética de readout de instrumento), y los lenguajes como barra segmentada
+full-width + leyenda en dos columnas. Sin números inventados.
 """
-import math
 from datetime import datetime
 
 from statsgen.theme import THEMES, LANG_COLORS, FONT_SANS, FONT_MONO
@@ -13,17 +11,6 @@ from statsgen.theme import THEMES, LANG_COLORS, FONT_SANS, FONT_MONO
 WIDTH = 800
 PAD = 22
 INNER = WIDTH - 2 * PAD
-
-
-def _waveform(x0, x1, y, amp, cycles, n=72):
-    """Polyline sinusoidal decorativa (oscilograma sutil de la cabecera)."""
-    pts = []
-    for i in range(n + 1):
-        tt = i / n
-        px = x0 + (x1 - x0) * tt
-        py = y + amp * math.sin(tt * cycles * 2 * math.pi)
-        pts.append(f"{px:.1f},{py:.1f}")
-    return "M" + " L".join(pts)
 
 
 def _metric(x, label, value):
@@ -43,15 +30,21 @@ def render_stats_svg(lang_pcts, activity, theme):
         ("Followers", f"{activity['followers']:,}"),
         ("Commits / yr", f"{activity['commits_year']:,}"),
         ("Contributions / yr", f"{activity['contributions_year']:,}"),
+        ("Repo views / 14d", f"{activity['views_14d']:,}"),
+        ("Clones / 14d", f"{activity['clones_14d']:,}"),
     ]
-    mcol = INNER / len(metrics)
-    metrics_y = header_h + 38
+    cols = 4
+    mcol = INNER / cols
+    m_row_h = 46
+    metrics_y = header_h + 32
     metric_svg = "".join(
-        f'<g transform="translate({i * mcol:.0f}, 0)">{_metric(0, lbl, val)}</g>'
+        f'<g transform="translate({(i % cols) * mcol:.0f}, {(i // cols) * m_row_h})">'
+        f"{_metric(0, lbl, val)}</g>"
         for i, (lbl, val) in enumerate(metrics)
     )
+    m_rows = (len(metrics) + cols - 1) // cols
 
-    lang_title_y = metrics_y + 52
+    lang_title_y = metrics_y + (m_rows - 1) * m_row_h + 54
     bar_y = lang_title_y + 34
     bar_h = 14
     segs, x = [], 0.0
@@ -83,8 +76,6 @@ def render_stats_svg(lang_pcts, activity, theme):
     legend_svg = "".join(legend)
     height = legend_top + half * row_h + 22
 
-    wave = _waveform(WIDTH - 232, WIDTH - PAD, header_h / 2 + 2, 7, 4)
-
     return f'''<svg width="{WIDTH}" height="{height}" viewBox="0 0 {WIDTH} {height}" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <clipPath id="card"><rect x="0.5" y="0.5" width="{WIDTH - 1}" height="{height - 1}" rx="6"/></clipPath>
@@ -103,7 +94,6 @@ def render_stats_svg(lang_pcts, activity, theme):
   <g clip-path="url(#card)"><rect x="0" y="0" width="{WIDTH}" height="{header_h}" fill="{t['bg_muted']}"/></g>
   <line x1="0.5" y1="{header_h}" x2="{WIDTH - 0.5}" y2="{header_h}" stroke="{t['border']}"/>
   <rect x="0.5" y="0.5" width="{WIDTH - 1}" height="{height - 1}" rx="6" fill="none" stroke="{t['border']}"/>
-  <path d="{wave}" fill="none" stroke="{t['accent']}" stroke-width="1.5" opacity="0.45"/>
   <text class="h-title" x="{PAD}" y="31">GitHub Statistics</text>
   <g transform="translate({PAD}, {metrics_y})">{metric_svg}</g>
   <text class="s-title" x="{PAD}" y="{lang_title_y}">Most Used Languages</text>

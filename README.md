@@ -4,34 +4,10 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 
 ## 🛠️ Tech Stack
 
-### Languages
-<p align="center">
-  <a href="https://isocpp.org/"><img src="https://skillicons.dev/icons?i=cpp" alt="C++" /></a>
-  <a href="https://en.wikipedia.org/wiki/C_(programming_language)"><img src="https://skillicons.dev/icons?i=c" alt="C"/></a>
-  <a href="https://www.python.org/"><img src="https://skillicons.dev/icons?i=python" alt="Python"/></a>
-  <a href="https://www.mathworks.com/products/matlab.html"><img src="https://skillicons.dev/icons?i=matlab" alt="MATLAB"/></a>
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://skillicons.dev/icons?i=js" alt="JavaScript"/></a>
-  <a href="https://www.gnu.org/software/bash/"><img src="https://skillicons.dev/icons?i=bash" alt="Bash"/></a>
-</p>
-
-### Frameworks & Tools
-<p align="center">
-  <a href="https://astro.build/"><img src="https://skillicons.dev/icons?i=astro" alt="Astro"/></a>
-  <a href="https://nodejs.org/"><img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js"/></a>
-  <a href="https://www.docker.com/"><img src="https://skillicons.dev/icons?i=docker" alt="Docker"/></a>
-  <a href="https://nginx.org/"><img src="https://skillicons.dev/icons?i=nginx" alt="Nginx"/></a>
-  <a href="https://www.linux.org/"><img src="https://skillicons.dev/icons?i=linux" alt="Linux"/></a>
-  <a href="https://git-scm.com/"><img src="https://skillicons.dev/icons?i=git" alt="Git"/></a>
-</p>
-
-### Infrastructure & Services
-<p align="center">
-  <a href="https://mikrotik.com/"><img src="assets/icons/tech/mikrotik.svg" width="48" height="48" alt="MikroTik"/></a>
-  <a href="https://matrix.org/"><img src="assets/icons/tech/matrix.svg" width="48" height="48" alt="Matrix Synapse"/></a>
-  <a href="https://joinmastodon.org/"><img src="assets/icons/tech/mastodon.svg" width="48" height="48" alt="Mastodon"/></a>
-  <a href="https://www.home-assistant.io/"><img src="assets/icons/tech/homeassistant.svg" width="48" height="48" alt="Home Assistant"/></a>
-  <a href="https://meshtastic.org/"><img src="assets/icons/tech/meshtastic.svg" width="48" height="48" alt="Meshtastic"/></a>
-</p>
+<div align="center">
+  <img src="generated/tech-stack-dark.svg#gh-dark-mode-only" alt="Tech Stack" width="100%"/>
+  <img src="generated/tech-stack-light.svg#gh-light-mode-only" alt="Tech Stack" width="100%"/>
+</div>
 
 ## 📝 Latest Blog Posts
 

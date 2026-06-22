@@ -2,10 +2,11 @@
 """Orquestador: obtiene datos de GitHub/RSS, genera los SVG y actualiza el README."""
 import os
 
-from statsgen.fetch import fetch_stats, fetch_blog_posts
+from statsgen.fetch import fetch_stats, fetch_traffic, fetch_blog_posts
 from statsgen.transform import normalize_languages, languages_to_percentages
 from statsgen.render_stats import render_stats_svg
 from statsgen.render_blog import render_blog_card_svg
+from statsgen.render_techstack import render_techstack_svg
 from statsgen.readme import update_readme_blog
 
 NUM_POSTS = 3
@@ -22,14 +23,22 @@ def main(token, outdir="generated", readme_path="README.md"):
     print("Obteniendo estadísticas de GitHub...")
     activity, language_repos = fetch_stats(token)
     lang_pcts = languages_to_percentages(normalize_languages(language_repos))
+
+    print("Obteniendo tráfico (14d) de los repos...")
+    names = [n["nameWithOwner"] for n in language_repos
+             if n.get("nameWithOwner") and not n.get("isArchived")]
+    activity.update(fetch_traffic(token, names))
     print(f"  Repos: {activity['public_repos']}  Stars: {activity['total_stars']}  "
-          f"Commits(yr): {activity['commits_year']}")
+          f"Commits(yr): {activity['commits_year']}  "
+          f"Views(14d): {activity['views_14d']}  Clones(14d): {activity['clones_14d']}")
     print(f"  Lenguajes: {[l for l, _ in lang_pcts]}")
 
     for theme in ("dark", "light"):
         _write(os.path.join(outdir, f"github-stats-{theme}.svg"),
                render_stats_svg(lang_pcts, activity, theme))
-    print("✅ Panel de estadísticas generado (dark + light)")
+        _write(os.path.join(outdir, f"tech-stack-{theme}.svg"),
+               render_techstack_svg(theme))
+    print("✅ Panel de estadísticas y Tech Stack generados (dark + light)")
 
     print("Obteniendo posts del blog...")
     posts = fetch_blog_posts(num_posts=NUM_POSTS)
