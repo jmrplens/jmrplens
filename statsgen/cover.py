@@ -13,9 +13,10 @@ except ImportError:  # pragma: no cover
     Image = None
 
 
-def make_cover_data_uri(image_url, width, height, scale=2, quality=78):
+def make_cover_data_uri(image_url, width, height, scale=1.6, quality=64):
     """Devuelve 'data:image/jpeg;base64,...' recortado a width×height (con
-    supersampling x`scale` para nitidez en retina), o None si falla/no hay PIL."""
+    supersampling x`scale` para nitidez), comprimido para no inflar el SVG.
+    Devuelve None si falla la descarga/proceso o no hay PIL."""
     if not image_url or Image is None:
         return None
     try:
@@ -23,7 +24,7 @@ def make_cover_data_uri(image_url, width, height, scale=2, quality=78):
         resp.raise_for_status()
         img = Image.open(io.BytesIO(resp.content)).convert("RGB")
 
-        tw, th = width * scale, height * scale
+        tw, th = int(width * scale), int(height * scale)
         target = tw / th
         w, h = img.size
         ratio = w / h

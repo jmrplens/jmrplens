@@ -13,7 +13,9 @@ from statsgen.theme import THEMES, FONT_SANS, FONT_MONO
 WIDTH = 800
 HEIGHT = 176
 PAD = 22
-IMG_W = 250
+# Ancho del panel de portada elegido para casar con el aspecto de una og:image
+# estándar (1200×630 ≈ 1.9): 176 × 1.9 ≈ 335 → se ve completa, sin recorte lateral.
+IMG_W = 335
 
 
 def _esc(text):
@@ -31,8 +33,8 @@ def render_blog_card_svg(post, index, theme, cover_uri=None):
     t = THEMES[theme]
     has_cover = bool(cover_uri)
     text_right = (WIDTH - IMG_W - 18) if has_cover else (WIDTH - PAD)
-    title_max = 36 if has_cover else 52
-    desc_max = 50 if has_cover else 78
+    title_max = 30 if has_cover else 52
+    desc_max = 44 if has_cover else 78
 
     title_lines = wrap_text(_strip_html(post["title"]), max_chars=title_max, max_lines=2)
     desc_lines = wrap_text(_strip_html(post["description"]), max_chars=desc_max, max_lines=2)

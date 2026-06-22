@@ -17,7 +17,7 @@ def test_make_cover_returns_jpeg_data_uri(monkeypatch):
         content = _png_bytes()
         def raise_for_status(self): pass
     monkeypatch.setattr(cover.requests, "get", lambda *a, **k: FakeResp())
-    uri = cover.make_cover_data_uri("https://x/cover.png", 250, 176)
+    uri = cover.make_cover_data_uri("https://x/cover.png", 250, 176, scale=2)
     assert uri.startswith("data:image/jpeg;base64,")
     # el payload base64 decodifica a una imagen JPEG válida del tamaño pedido (x2)
     raw = base64.b64decode(uri.split(",", 1)[1])
