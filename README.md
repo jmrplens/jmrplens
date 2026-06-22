@@ -59,7 +59,7 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 
 <p align="center">
   <a href="https://jmrp.io/blog">
-    <img src="https://img.shields.io/badge/📚_Read_all_posts-667eea?style=for-the-badge" alt="Read all posts"/>
+    <img src="https://img.shields.io/badge/📚_Read_all_posts-0969da?style=for-the-badge" alt="Read all posts"/>
   </a>
 </p>
 <!-- BLOG-POSTS:END -->
@@ -73,7 +73,7 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 
 <p align="center">
   <a href="https://jmrp.io">
-    <img src="https://img.shields.io/badge/-Website-667eea?style=flat-square&logo=googlechrome&logoColor=white" alt="Website"/>
+    <img src="https://img.shields.io/badge/-Website-0969da?style=flat-square&logo=googlechrome&logoColor=white" alt="Website"/>
   </a>
   <a href="https://www.linkedin.com/in/jmrplens/">
     <img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
@@ -84,5 +84,5 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=jmrplens&style=flat-square&color=667eea" alt="Profile Views"/>
+  <img src="https://komarev.com/ghpvc/?username=jmrplens&style=flat-square&color=0969da" alt="Profile Views"/>
 </p>

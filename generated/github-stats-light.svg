@@ -1,27 +1,27 @@
-<svg width="800" height="527" viewBox="0 0 800 527" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="336" viewBox="0 0 800 336" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#667eea"/>
-      <stop offset="100%" style="stop-color:#764ba2"/>
-    </linearGradient>
-    <style>
-      .title { font: 600 18px 'Segoe UI', Ubuntu, sans-serif; fill: #24292e; }
-      .stat-label { font: 400 12px 'Segoe UI', Ubuntu, sans-serif; fill: #586069; }
-      .stat-value { font: 700 22px 'Segoe UI', Ubuntu, sans-serif; fill: #24292e; }
-      .lang-name { font: 400 13px 'Segoe UI', Ubuntu, sans-serif; fill: #586069; }
-      .lang-pct { font: 600 12px 'Segoe UI', Ubuntu, sans-serif; fill: #24292e; }
-      .footer { font: 400 11px 'Segoe UI', Ubuntu, sans-serif; fill: #586069; }
-    </style>
+    <clipPath id="card"><rect x="0.5" y="0.5" width="799" height="335" rx="6"/></clipPath>
   </defs>
-  <rect width="800" height="527" rx="10" fill="#ffffff" stroke="#e1e4e8" stroke-width="1"/>
-  <rect x="0" y="0" width="6" height="527" rx="3" fill="url(#grad)"/>
-  <text class="title" x="25" y="38">GitHub Statistics</text>
-  <g transform="translate(25, 70)"><g transform="translate(0, 0)"><text class="stat-label" x="0" y="0">Repositories</text><text class="stat-value" x="0" y="28">23</text></g><g transform="translate(152, 0)"><text class="stat-label" x="0" y="0">Stars</text><text class="stat-value" x="0" y="28">304</text></g><g transform="translate(304, 0)"><text class="stat-label" x="0" y="0">Followers</text><text class="stat-value" x="0" y="28">34</text></g><g transform="translate(456, 0)"><text class="stat-label" x="0" y="0">Commits (yr)</text><text class="stat-value" x="0" y="28">455</text></g><g transform="translate(608, 0)"><text class="stat-label" x="0" y="0">Contributions (yr)</text><text class="stat-value" x="0" y="28">1,520</text></g></g>
-  <line x1="25" y1="120" x2="775" y2="120" stroke="#e1e4e8" stroke-width="1"/>
-  <text class="title" x="25" y="160">Most Used Languages</text>
-  <text class="stat-label" x="25" y="180">Normalized share across repositories (public + private)</text>
-  <g transform="translate(25, 215)">
-    <g transform="translate(0, 0)"><circle cx="7" cy="9" r="6.5" fill="#e16737"/><text class="lang-name" x="22" y="14">MATLAB</text><rect x="130" y="3" width="151.8" height="12" rx="6" fill="#e16737" opacity="0.85"/><text class="lang-pct" x="289.8" y="14">32%</text></g><g transform="translate(0, 34)"><circle cx="7" cy="9" r="6.5" fill="#3572A5"/><text class="lang-name" x="22" y="14">Python</text><rect x="130" y="3" width="84.5" height="12" rx="6" fill="#3572A5" opacity="0.85"/><text class="lang-pct" x="222.5" y="14">18%</text></g><g transform="translate(0, 68)"><circle cx="7" cy="9" r="6.5" fill="#00ADD8"/><text class="lang-name" x="22" y="14">Go</text><rect x="130" y="3" width="58.5" height="12" rx="6" fill="#00ADD8" opacity="0.85"/><text class="lang-pct" x="196.5" y="14">12%</text></g><g transform="translate(0, 102)"><circle cx="7" cy="9" r="6.5" fill="#3D6117"/><text class="lang-name" x="22" y="14">TeX</text><rect x="130" y="3" width="49.7" height="12" rx="6" fill="#3D6117" opacity="0.85"/><text class="lang-pct" x="187.7" y="14">10%</text></g><g transform="translate(0, 136)"><circle cx="7" cy="9" r="6.5" fill="#555555"/><text class="lang-name" x="22" y="14">C</text><rect x="130" y="3" width="45.0" height="12" rx="6" fill="#555555" opacity="0.85"/><text class="lang-pct" x="183.0" y="14">9%</text></g><g transform="translate(0, 170)"><circle cx="7" cy="9" r="6.5" fill="#89e051"/><text class="lang-name" x="22" y="14">Shell</text><rect x="130" y="3" width="35.0" height="12" rx="6" fill="#89e051" opacity="0.85"/><text class="lang-pct" x="173.0" y="14">7%</text></g><g transform="translate(0, 204)"><circle cx="7" cy="9" r="6.5" fill="#f34b7d"/><text class="lang-name" x="22" y="14">C++</text><rect x="130" y="3" width="34.8" height="12" rx="6" fill="#f34b7d" opacity="0.85"/><text class="lang-pct" x="172.8" y="14">7%</text></g><g transform="translate(0, 238)"><circle cx="7" cy="9" r="6.5" fill="#e34c26"/><text class="lang-name" x="22" y="14">HTML</text><rect x="130" y="3" width="20.8" height="12" rx="6" fill="#e34c26" opacity="0.85"/><text class="lang-pct" x="158.8" y="14">4%</text></g>
-  </g>
-  <text class="footer" x="400" y="513" text-anchor="middle">Updated 2026-06-22 14:43 UTC</text>
+  <style>
+    .h-title { font: 600 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; fill: #1f2328; }
+    .s-title { font: 600 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; fill: #1f2328; }
+    .s-sub { font: 400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; fill: #59636e; }
+    .m-val { font: 600 22px ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; fill: #1f2328; }
+    .m-lbl { font: 400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; fill: #59636e; }
+    .lg-name { font: 400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; fill: #1f2328; }
+    .lg-pct { font: 500 13px ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; fill: #59636e; }
+    .foot { font: 400 10px ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; fill: #59636e; }
+  </style>
+  <rect x="0.5" y="0.5" width="799" height="335" rx="6" fill="#ffffff"/>
+  <g clip-path="url(#card)"><rect x="0" y="0" width="800" height="50" fill="#f6f8fa"/></g>
+  <line x1="0.5" y1="50" x2="799.5" y2="50" stroke="#d1d9e0"/>
+  <rect x="0.5" y="0.5" width="799" height="335" rx="6" fill="none" stroke="#d1d9e0"/>
+  <path d="M568.0,27.0 L570.9,29.4 L573.8,31.5 L576.8,33.1 L579.7,33.9 L582.6,33.9 L585.5,33.1 L588.4,31.5 L591.3,29.4 L594.2,27.0 L597.2,24.6 L600.1,22.5 L603.0,20.9 L605.9,20.1 L608.8,20.1 L611.8,20.9 L614.7,22.5 L617.6,24.6 L620.5,27.0 L623.4,29.4 L626.3,31.5 L629.2,33.1 L632.2,33.9 L635.1,33.9 L638.0,33.1 L640.9,31.5 L643.8,29.4 L646.8,27.0 L649.7,24.6 L652.6,22.5 L655.5,20.9 L658.4,20.1 L661.3,20.1 L664.2,20.9 L667.2,22.5 L670.1,24.6 L673.0,27.0 L675.9,29.4 L678.8,31.5 L681.8,33.1 L684.7,33.9 L687.6,33.9 L690.5,33.1 L693.4,31.5 L696.3,29.4 L699.2,27.0 L702.2,24.6 L705.1,22.5 L708.0,20.9 L710.9,20.1 L713.8,20.1 L716.8,20.9 L719.7,22.5 L722.6,24.6 L725.5,27.0 L728.4,29.4 L731.3,31.5 L734.2,33.1 L737.2,33.9 L740.1,33.9 L743.0,33.1 L745.9,31.5 L748.8,29.4 L751.8,27.0 L754.7,24.6 L757.6,22.5 L760.5,20.9 L763.4,20.1 L766.3,20.1 L769.2,20.9 L772.2,22.5 L775.1,24.6 L778.0,27.0" fill="none" stroke="#0969da" stroke-width="1.5" opacity="0.45"/>
+  <text class="h-title" x="22" y="31">GitHub Statistics</text>
+  <g transform="translate(22, 88)"><g transform="translate(0, 0)"><text class="m-val" x="0" y="0">23</text><text class="m-lbl" x="0" y="18">Repositories</text></g><g transform="translate(151, 0)"><text class="m-val" x="0" y="0">304</text><text class="m-lbl" x="0" y="18">Stars</text></g><g transform="translate(302, 0)"><text class="m-val" x="0" y="0">34</text><text class="m-lbl" x="0" y="18">Followers</text></g><g transform="translate(454, 0)"><text class="m-val" x="0" y="0">1,136</text><text class="m-lbl" x="0" y="18">Commits / yr</text></g><g transform="translate(605, 0)"><text class="m-val" x="0" y="0">1,536</text><text class="m-lbl" x="0" y="18">Contributions / yr</text></g></g>
+  <text class="s-title" x="22" y="140">Most Used Languages</text>
+  <text class="s-sub" x="22" y="157">Normalized share across repositories · public + private</text>
+  <g transform="translate(22, 174)"><rect x="0.0" y="0" width="237.1" height="14" rx="3" fill="#e16737"/><rect x="239.1" y="0" width="131.1" height="14" rx="3" fill="#3572A5"/><rect x="372.2" y="0" width="90.2" height="14" rx="3" fill="#00ADD8"/><rect x="464.4" y="0" width="76.2" height="14" rx="3" fill="#3D6117"/><rect x="542.6" y="0" width="68.9" height="14" rx="3" fill="#555555"/><rect x="613.5" y="0" width="53.1" height="14" rx="3" fill="#89e051"/><rect x="668.5" y="0" width="52.8" height="14" rx="3" fill="#f34b7d"/><rect x="723.3" y="0" width="30.7" height="14" rx="3" fill="#e34c26"/></g>
+  <g transform="translate(22, 214)"><g transform="translate(0, 0)"><circle cx="6" cy="-4" r="6" fill="#e16737"/><text class="lg-name" x="20" y="0">MATLAB</text><text class="lg-pct" x="358" y="0" text-anchor="end">32%</text></g><g transform="translate(0, 25)"><circle cx="6" cy="-4" r="6" fill="#3572A5"/><text class="lg-name" x="20" y="0">Python</text><text class="lg-pct" x="358" y="0" text-anchor="end">18%</text></g><g transform="translate(0, 50)"><circle cx="6" cy="-4" r="6" fill="#00ADD8"/><text class="lg-name" x="20" y="0">Go</text><text class="lg-pct" x="358" y="0" text-anchor="end">12%</text></g><g transform="translate(0, 75)"><circle cx="6" cy="-4" r="6" fill="#3D6117"/><text class="lg-name" x="20" y="0">TeX</text><text class="lg-pct" x="358" y="0" text-anchor="end">10%</text></g><g transform="translate(378, 0)"><circle cx="6" cy="-4" r="6" fill="#555555"/><text class="lg-name" x="20" y="0">C</text><text class="lg-pct" x="358" y="0" text-anchor="end">9%</text></g><g transform="translate(378, 25)"><circle cx="6" cy="-4" r="6" fill="#89e051"/><text class="lg-name" x="20" y="0">Shell</text><text class="lg-pct" x="358" y="0" text-anchor="end">7%</text></g><g transform="translate(378, 50)"><circle cx="6" cy="-4" r="6" fill="#f34b7d"/><text class="lg-name" x="20" y="0">C++</text><text class="lg-pct" x="358" y="0" text-anchor="end">7%</text></g><g transform="translate(378, 75)"><circle cx="6" cy="-4" r="6" fill="#e34c26"/><text class="lg-name" x="20" y="0">HTML</text><text class="lg-pct" x="358" y="0" text-anchor="end">4%</text></g></g>
+  <text class="foot" x="400" y="325" text-anchor="middle">updated 2026-06-22 17:30 UTC</text>
 </svg>

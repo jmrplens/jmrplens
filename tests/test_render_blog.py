@@ -14,11 +14,16 @@ def test_card_is_well_formed_svg():
     assert svg.lstrip().startswith("<svg")
 
 
-def test_card_contains_index_and_read_more():
+def test_card_marks_latest_and_shows_date_and_read_more():
     svg = render_blog_card_svg(POST, index=1, theme="dark")
-    assert "01" in svg
-    assert "Jun 2026" in svg
+    assert "LATEST" in svg            # index 1 = entrada más reciente
+    assert "JUN 2026" in svg          # fecha como eyebrow en mayúsculas
     assert "Read more" in svg
+
+
+def test_card_without_latest_for_non_first():
+    svg = render_blog_card_svg(POST, index=2, theme="dark")
+    assert "LATEST" not in svg
 
 
 def test_card_escapes_xml_special_chars():

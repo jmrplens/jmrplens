@@ -1,23 +1,15 @@
-<svg width="800" height="176" viewBox="0 0 800 176" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#667eea"/>
-      <stop offset="100%" style="stop-color:#764ba2"/>
-    </linearGradient>
-    <style>
-      .card-index { font: 700 28px 'Segoe UI', Ubuntu, sans-serif; fill: #ffffff; }
-      .card-date { font: 600 11px 'Segoe UI', Ubuntu, sans-serif; fill: #ffffff; opacity: 0.85; }
-      .card-title { font: 700 20px 'Segoe UI', Ubuntu, sans-serif; fill: #c9d1d9; }
-      .card-desc { font: 400 14px 'Segoe UI', Ubuntu, sans-serif; fill: #8b949e; }
-      .card-more { font: 600 14px 'Segoe UI', Ubuntu, sans-serif; fill: #667eea; }
-    </style>
-  </defs>
-  <rect x="0.5" y="0.5" width="799" height="175" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
-  <rect x="0" y="0" width="58" height="176" rx="12" fill="url(#grad2)"/>
-  <rect x="46" y="0" width="12" height="176" fill="url(#grad2)"/>
-  <text class="card-index" x="29" y="68" text-anchor="middle">02</text>
-  <text class="card-date" x="29" y="88" text-anchor="middle">Jun 2026</text>
-  <text class="card-title" x="80" y="48">A Vault File That Fails Closed:</text><text class="card-title" x="80" y="75">Encrypt-then-MAC on an MCU</text>
-  <text class="card-desc" x="80" y="114">How a hardware password manager authenticates every vault file</text><text class="card-desc" x="80" y="135">before it decrypts: encrypt-then-MAC, verify-before-decrypt, an…</text>
-  <text class="card-more" x="80" y="156">Read more →</text>
+<svg width="800" height="184" viewBox="0 0 800 184" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .b-date { font: 500 11px ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; fill: #9198a1; letter-spacing: 0.5px; }
+    .b-latest { font: 600 10px ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; fill: #4493f8; letter-spacing: 0.5px; }
+    .b-title { font: 600 18px -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; fill: #4493f8; }
+    .b-desc { font: 400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; fill: #9198a1; }
+    .b-more { font: 500 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; fill: #4493f8; }
+  </style>
+  <rect x="0.5" y="0.5" width="799" height="183" rx="6" fill="#0d1117" stroke="#3d444d"/>
+  <text class="b-date" x="22" y="30">JUN 2026</text>
+  
+  <text class="b-title" x="22" y="56">A Vault File That Fails Closed: Encrypt-then-MAC on</text><text class="b-title" x="22" y="81">an MCU</text>
+  <text class="b-desc" x="22" y="118">How a hardware password manager authenticates every vault file before it</text><text class="b-desc" x="22" y="138">decrypts: encrypt-then-MAC, verify-before-decrypt, and fail-closed reads.</text>
+  <text class="b-more" x="22" y="168">Read more →</text>
 </svg>

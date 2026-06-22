@@ -7,7 +7,7 @@ BLOG_END = "<!-- BLOG-POSTS:END -->"
 _READ_ALL_BADGE = (
     '<p align="center">\n'
     '  <a href="https://jmrp.io/blog">\n'
-    '    <img src="https://img.shields.io/badge/📚_Read_all_posts-667eea?style=for-the-badge" '
+    '    <img src="https://img.shields.io/badge/📚_Read_all_posts-0969da?style=for-the-badge" '
     'alt="Read all posts"/>\n'
     "  </a>\n"
     "</p>"
