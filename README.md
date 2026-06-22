@@ -36,34 +36,20 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 ## 📝 Latest Blog Posts
 
 <!-- BLOG-POSTS:START -->
-<table>
-<tr>
-<td width="33%" valign="top">
+<a href="https://jmrp.io/blog/012-device-bound-key-derivation/">
+  <img src="generated/blog-1-dark.svg#gh-dark-mode-only" width="100%" alt="Your 4-Digit PIN Is Fine: Device-Bound Keys on ESP32-S3"/>
+  <img src="generated/blog-1-light.svg#gh-light-mode-only" width="100%" alt="Your 4-Digit PIN Is Fine: Device-Bound Keys on ESP32-S3"/>
+</a>
 
-### [Your 4-Digit PIN Is Fine: Device-Bound Keys on ESP32-S3](https://jmrp.io/blog/012-device-bound-key-derivation/)
-Why PBKDF2 iterations can't protect a 4-digit PIN on a microcontroller, and how an eFuse-HMAC device secret plus HKDF stops offline brute force.
+<a href="https://jmrp.io/blog/011-encrypt-then-mac-vault/">
+  <img src="generated/blog-2-dark.svg#gh-dark-mode-only" width="100%" alt="A Vault File That Fails Closed: Encrypt-then-MAC on an MCU"/>
+  <img src="generated/blog-2-light.svg#gh-light-mode-only" width="100%" alt="A Vault File That Fails Closed: Encrypt-then-MAC on an MCU"/>
+</a>
 
-[Read more →](https://jmrp.io/blog/012-device-bound-key-derivation/)
-
-</td>
-<td width="33%" valign="top">
-
-### [A Vault File That Fails Closed: Encrypt-then-MAC on an MCU](https://jmrp.io/blog/011-encrypt-then-mac-vault/)
-How a hardware password manager authenticates every vault file before it decrypts: encrypt-then-MAC, verify-before-decrypt, and fail-closed reads.
-
-[Read more →](https://jmrp.io/blog/011-encrypt-then-mac-vault/)
-
-</td>
-<td width="33%" valign="top">
-
-### [What the Linker Won't Do: Packing i18n Strings on an MCU](https://jmrp.io/blog/010-packed-i18n-string-pool/)
-A build-time generator packs firmware UI translations into one string pool indexed by uint16 offsets, halving the index table on a 32-bit MCU.
-
-[Read more →](https://jmrp.io/blog/010-packed-i18n-string-pool/)
-
-</td>
-</tr>
-</table>
+<a href="https://jmrp.io/blog/010-packed-i18n-string-pool/">
+  <img src="generated/blog-3-dark.svg#gh-dark-mode-only" width="100%" alt="What the Linker Won't Do: Packing i18n Strings on an MCU"/>
+  <img src="generated/blog-3-light.svg#gh-light-mode-only" width="100%" alt="What the Linker Won't Do: Packing i18n Strings on an MCU"/>
+</a>
 
 <p align="center">
   <a href="https://jmrp.io/blog">
