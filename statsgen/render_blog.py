@@ -5,7 +5,7 @@ from statsgen.transform import wrap_text
 from statsgen.theme import THEMES
 
 WIDTH = 800
-HEIGHT = 150
+HEIGHT = 176
 
 
 def _esc(text):
@@ -26,12 +26,12 @@ def render_blog_card_svg(post, index, theme):
     date = _esc(post.get("date", ""))
 
     title_svg = "".join(
-        f'<text class="card-title" x="78" y="{48 + i * 26}">{_esc(line)}</text>'
+        f'<text class="card-title" x="80" y="{48 + i * 27}">{_esc(line)}</text>'
         for i, line in enumerate(title_lines)
     )
-    desc_top = 48 + len(title_lines) * 26 + 8
+    desc_top = 48 + len(title_lines) * 27 + 12
     desc_svg = "".join(
-        f'<text class="card-desc" x="78" y="{desc_top + i * 20}">{_esc(line)}</text>'
+        f'<text class="card-desc" x="80" y="{desc_top + i * 21}">{_esc(line)}</text>'
         for i, line in enumerate(desc_lines)
     )
 
@@ -42,19 +42,19 @@ def render_blog_card_svg(post, index, theme):
       <stop offset="100%" style="stop-color:#764ba2"/>
     </linearGradient>
     <style>
-      .card-index {{ font: 700 26px 'Segoe UI', Ubuntu, sans-serif; fill: #ffffff; }}
+      .card-index {{ font: 700 28px 'Segoe UI', Ubuntu, sans-serif; fill: #ffffff; }}
       .card-date {{ font: 600 11px 'Segoe UI', Ubuntu, sans-serif; fill: #ffffff; opacity: 0.85; }}
-      .card-title {{ font: 700 19px 'Segoe UI', Ubuntu, sans-serif; fill: {t['title']}; }}
-      .card-desc {{ font: 400 13px 'Segoe UI', Ubuntu, sans-serif; fill: {t['label']}; }}
-      .card-more {{ font: 600 13px 'Segoe UI', Ubuntu, sans-serif; fill: #667eea; }}
+      .card-title {{ font: 700 20px 'Segoe UI', Ubuntu, sans-serif; fill: {t['title']}; }}
+      .card-desc {{ font: 400 14px 'Segoe UI', Ubuntu, sans-serif; fill: {t['label']}; }}
+      .card-more {{ font: 600 14px 'Segoe UI', Ubuntu, sans-serif; fill: #667eea; }}
     </style>
   </defs>
   <rect x="0.5" y="0.5" width="{WIDTH - 1}" height="{HEIGHT - 1}" rx="12" fill="{t['bg']}" stroke="{t['bg_stroke']}" stroke-width="1"/>
   <rect x="0" y="0" width="58" height="{HEIGHT}" rx="12" fill="url(#grad{index})"/>
   <rect x="46" y="0" width="12" height="{HEIGHT}" fill="url(#grad{index})"/>
-  <text class="card-index" x="29" y="60" text-anchor="middle">{index:02d}</text>
-  <text class="card-date" x="29" y="80" text-anchor="middle">{date}</text>
+  <text class="card-index" x="29" y="68" text-anchor="middle">{index:02d}</text>
+  <text class="card-date" x="29" y="88" text-anchor="middle">{date}</text>
   {title_svg}
   {desc_svg}
-  <text class="card-more" x="78" y="{HEIGHT - 18}">Read more →</text>
+  <text class="card-more" x="80" y="{HEIGHT - 20}">Read more →</text>
 </svg>'''
