@@ -1,4 +1,5 @@
 """Obtención de datos: GraphQL (stats) y RSS (blog)."""
+import re
 import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
 
@@ -13,11 +14,12 @@ STATS_QUERY = """query {
     followers { totalCount }
     contributionsCollection {
       totalCommitContributions
+      totalPullRequestContributions
       contributionCalendar { totalContributions }
     }
     repositories(privacy: PUBLIC, isFork: false, ownerAffiliations: OWNER, first: 100) {
       totalCount
-      nodes { stargazerCount }
+      nodes { stargazerCount forkCount }
     }
   }
   viewer {
@@ -56,12 +58,49 @@ def fetch_stats(token):
     activity = {
         "public_repos": pub["totalCount"],
         "total_stars": sum(n["stargazerCount"] for n in pub["nodes"]),
+        "total_forks": sum(n["forkCount"] for n in pub["nodes"]),
         "followers": user["followers"]["totalCount"],
         "commits_year": cc["totalCommitContributions"],
+        "prs_year": cc["totalPullRequestContributions"],
         "contributions_year": cc["contributionCalendar"]["totalContributions"],
     }
     language_repos = data["viewer"]["repositories"]["nodes"]
     return activity, language_repos
+
+
+def fetch_profile_views():
+    """Lee el contador de visitas de perfil de komarev (badge SVG) y extrae el
+    número. Devuelve int, o None si falla."""
+    try:
+        r = requests.get(
+            "https://komarev.com/ghpvc/?username=jmrplens&base=0",
+            timeout=20,
+        )
+        r.raise_for_status()
+        nums = re.findall(r">([0-9][0-9,]*)</text>", r.text)
+        if nums:
+            return int(nums[-1].replace(",", ""))
+    except requests.RequestException:
+        pass
+    return None
+
+
+def fetch_og_image(url):
+    """Devuelve la URL de la imagen de portada (og:image / twitter:image) de una
+    página, o None."""
+    try:
+        r = requests.get(url, timeout=20)
+        r.raise_for_status()
+        m = re.search(
+            r'<meta[^>]+(?:property|name)="(?:og:image|twitter:image)"[^>]*content="([^"]+)"',
+            r.text,
+        ) or re.search(
+            r'<meta[^>]+content="([^"]+)"[^>]*(?:property|name)="(?:og:image|twitter:image)"',
+            r.text,
+        )
+        return m.group(1) if m else None
+    except requests.RequestException:
+        return None
 
 
 def fetch_traffic(token, repo_full_names):

@@ -42,5 +42,6 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=jmrplens&style=flat-square&color=0969da" alt="Profile Views"/>
+  <img src="generated/views-dark.svg#gh-dark-mode-only" alt="Profile views"/>
+  <img src="generated/views-light.svg#gh-light-mode-only" alt="Profile views"/>
 </p>

@@ -18,3 +18,12 @@ def test_chip_dark_and_light_differ():
 
 def test_slug_is_lowercase():
     assert slug("LinkedIn") == "linkedin"
+
+
+def test_views_chip_shows_count_and_is_well_formed():
+    from statsgen.render_connect import render_views_chip_svg
+    svg = render_views_chip_svg(1234, "dark")
+    minidom.parseString(svg)
+    assert "1,234" in svg
+    assert "Profile views" in svg
+    assert render_views_chip_svg(1, "dark") != render_views_chip_svg(1, "light")

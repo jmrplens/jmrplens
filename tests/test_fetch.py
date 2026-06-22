@@ -6,11 +6,15 @@ SAMPLE_GQL = {
         "followers": {"totalCount": 34},
         "contributionsCollection": {
             "totalCommitContributions": 1116,
+            "totalPullRequestContributions": 371,
             "contributionCalendar": {"totalContributions": 1516},
         },
         "repositories": {
             "totalCount": 18,
-            "nodes": [{"stargazerCount": 200}, {"stargazerCount": 50}],
+            "nodes": [
+                {"stargazerCount": 200, "forkCount": 7},
+                {"stargazerCount": 50, "forkCount": 5},
+            ],
         },
     },
     "viewer": {
@@ -29,8 +33,10 @@ def test_fetch_stats_maps_activity_and_languages(monkeypatch):
     assert activity == {
         "public_repos": 18,
         "total_stars": 250,
+        "total_forks": 12,
         "followers": 34,
         "commits_year": 1116,
+        "prs_year": 371,
         "contributions_year": 1516,
     }
     assert langs == SAMPLE_GQL["viewer"]["repositories"]["nodes"]
@@ -88,3 +94,28 @@ def test_fetch_traffic_skips_inaccessible_repos(monkeypatch):
             return {}
     monkeypatch.setattr(fetch.requests, "get", lambda *a, **k: FakeResp())
     assert fetch.fetch_traffic("tok", ["a/x"]) == {"views_14d": 0, "clones_14d": 0}
+
+
+def test_fetch_profile_views_parses_count(monkeypatch):
+    class FakeResp:
+        text = '<svg><text>views</text><text x="10">1,234</text></svg>'
+        def raise_for_status(self): pass
+    monkeypatch.setattr(fetch.requests, "get", lambda *a, **k: FakeResp())
+    assert fetch.fetch_profile_views() == 1234
+
+
+def test_fetch_og_image_extracts_url(monkeypatch):
+    html = '<head><meta content="https://x/cover.webp" property="og:image"></head>'
+    class FakeResp:
+        text = html
+        def raise_for_status(self): pass
+    monkeypatch.setattr(fetch.requests, "get", lambda *a, **k: FakeResp())
+    assert fetch.fetch_og_image("https://x/post/") == "https://x/cover.webp"
+
+
+def test_fetch_og_image_none_when_missing(monkeypatch):
+    class FakeResp:
+        text = "<head></head>"
+        def raise_for_status(self): pass
+    monkeypatch.setattr(fetch.requests, "get", lambda *a, **k: FakeResp())
+    assert fetch.fetch_og_image("https://x/post/") is None

@@ -26,6 +26,18 @@ def test_card_without_latest_for_non_first():
     assert "LATEST" not in svg
 
 
+def test_card_embeds_cover_when_present():
+    uri = "data:image/jpeg;base64,QUJD"
+    svg = render_blog_card_svg(POST, 1, "dark", cover_uri=uri)
+    minidom.parseString(svg)
+    assert "<image" in svg
+    assert uri in svg
+
+
+def test_card_has_no_image_without_cover():
+    assert "<image" not in render_blog_card_svg(POST, 1, "dark")
+
+
 def test_card_escapes_xml_special_chars():
     post = {"title": "A & B <C>", "description": 'He said "hi"', "date": ""}
     svg = render_blog_card_svg(post, index=2, theme="light")

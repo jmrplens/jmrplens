@@ -2,8 +2,8 @@ from xml.dom import minidom
 from statsgen.render_stats import render_stats_svg
 
 ACTIVITY = {
-    "public_repos": 18, "total_stars": 250, "followers": 34,
-    "commits_year": 1116, "contributions_year": 1516,
+    "public_repos": 18, "total_stars": 250, "total_forks": 12, "followers": 34,
+    "commits_year": 1116, "prs_year": 371,
     "views_14d": 1122, "clones_14d": 25041,
 }
 LANGS = [("MATLAB", 40.0), ("Python", 30.0), ("C", 20.0), ("C++", 10.0)]
@@ -17,9 +17,10 @@ def test_render_stats_is_well_formed_svg():
 
 def test_render_stats_shows_real_metrics_no_invented():
     svg = render_stats_svg(LANGS, ACTIVITY, theme="dark")
-    assert "1,116" in svg          # commits del año, con separador de miles
-    assert "1,516" in svg          # contribuciones
+    assert "1,116" in svg          # commits del año
+    assert "371" in svg            # pull requests del año
     assert "250" in svg            # stars
+    assert "12" in svg             # forks
     assert "34" in svg             # followers
     assert "18" in svg             # repos públicos
     assert "1,122" in svg          # vistas de repos 14d (tráfico)

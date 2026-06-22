@@ -7,10 +7,23 @@ README y que sea clicable. Tamaño fijo: en móvil no se encogen a ilegible.
 import os
 import re
 
-from statsgen.theme import THEMES, FONT_SANS
+from statsgen.theme import THEMES, FONT_SANS, FONT_MONO
 
 H = 36
 ICON = 16
+
+# Octicon "eye" (GitHub), viewBox 0 0 16 16.
+_EYE = (
+    '<path d="M8 2c1.981 0 3.671.992 4.933 2.078 1.27 1.091 2.187 2.345 2.637 '
+    '3.023a1.62 1.62 0 0 1 0 1.798c-.45.678-1.367 1.932-2.637 3.023C11.67 13.008 '
+    '9.981 14 8 14c-1.981 0-3.671-.992-4.933-2.078C1.797 10.83.88 9.576.43 '
+    '8.898a1.62 1.62 0 0 1 0-1.798c.45-.677 1.367-1.931 2.637-3.022C4.329 2.992 '
+    '6.019 2 8 2Zm0 1.5c-1.473 0-2.825.742-3.955 1.715-1.124.967-1.954 2.096-2.366 '
+    '2.717a.12.12 0 0 0 0 .136c.412.621 1.242 1.75 2.366 2.717C5.175 11.758 6.527 '
+    '12.5 8 12.5c1.473 0 2.825-.742 3.955-1.715 1.124-.967 1.954-2.096 '
+    '2.366-2.717a.12.12 0 0 0 0-.136c-.412-.621-1.242-1.75-2.366-2.717C10.825 '
+    '4.242 9.473 3.5 8 3.5ZM8 10a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 10Z"/>'
+)
 
 # Globo dibujado con primitivas (válido y reconocible, sin depender de un path).
 _GLOBE = (
@@ -73,6 +86,26 @@ def render_connect_chip_svg(label, spec, theme):
   <rect x="0.5" y="0.5" width="{width - 1}" height="{H - 1}" rx="6" fill="{t['bg_muted']}" stroke="{t['border']}"/>
   <g transform="translate(14, {(H - ICON) // 2})">{_icon(spec, t['accent'])}</g>
   <text class="c-label" x="{14 + ICON + 8}" y="23">{label}</text>
+</svg>'''
+
+
+def render_views_chip_svg(count, theme):
+    """Chip nativo (no clicable) con el contador de visitas de perfil."""
+    t = THEMES[theme]
+    num = f"{count:,}"
+    label = "Profile views"
+    text_w = int(len(label) * 7.0) + 10 + int(len(num) * 8.2)
+    width = 14 + ICON + 8 + text_w + 14
+    num_x = 14 + ICON + 8 + int(len(label) * 7.0) + 10
+    return f'''<svg width="{width}" height="{H}" viewBox="0 0 {width} {H}" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .v-label {{ font: 400 13px {FONT_SANS}; fill: {t['muted']}; }}
+    .v-num {{ font: 600 13px {FONT_MONO}; fill: {t['fg']}; }}
+  </style>
+  <rect x="0.5" y="0.5" width="{width - 1}" height="{H - 1}" rx="6" fill="{t['bg_muted']}" stroke="{t['border']}"/>
+  <g transform="translate(14, {(H - ICON) // 2})"><svg width="{ICON}" height="{ICON}" viewBox="0 0 16 16" fill="{t['accent']}">{_EYE}</svg></g>
+  <text class="v-label" x="{14 + ICON + 8}" y="23">{label}</text>
+  <text class="v-num" x="{num_x}" y="23">{num}</text>
 </svg>'''
 
 

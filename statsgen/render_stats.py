@@ -25,11 +25,14 @@ def render_stats_svg(lang_pcts, activity, theme):
 
     header_h = 50
     metrics = [
+        # Fila 1: identidad del perfil
         ("Repositories", f"{activity['public_repos']:,}"),
         ("Stars", f"{activity['total_stars']:,}"),
+        ("Forks", f"{activity['total_forks']:,}"),
         ("Followers", f"{activity['followers']:,}"),
+        # Fila 2: actividad reciente
         ("Commits / yr", f"{activity['commits_year']:,}"),
-        ("Contributions / yr", f"{activity['contributions_year']:,}"),
+        ("Pull requests / yr", f"{activity['prs_year']:,}"),
         ("Repo views / 14d", f"{activity['views_14d']:,}"),
         ("Clones / 14d", f"{activity['clones_14d']:,}"),
     ]
