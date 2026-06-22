@@ -27,10 +27,14 @@ def build_blog_block(posts):
     for i, post in enumerate(posts, start=1):
         alt = _esc(post["title"])
         href = _esc(post["link"])
+        # <picture> + prefers-color-scheme: el truco "#gh-dark-mode-only" NO
+        # oculta variantes cuando el <img> va dentro de un <a>; <picture> sí.
         cards.append(
             f'<a href="{href}">\n'
-            f'  <img src="generated/blog-{i}-dark.svg#gh-dark-mode-only" width="100%" alt="{alt}"/>\n'
-            f'  <img src="generated/blog-{i}-light.svg#gh-light-mode-only" width="100%" alt="{alt}"/>\n'
+            f"  <picture>\n"
+            f'    <source media="(prefers-color-scheme: dark)" srcset="generated/blog-{i}-dark.svg"/>\n'
+            f'    <img src="generated/blog-{i}-light.svg" width="100%" alt="{alt}"/>\n'
+            f"  </picture>\n"
             f"</a>"
         )
     return "\n\n".join(cards) + "\n\n" + _READ_ALL_BADGE

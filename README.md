@@ -37,18 +37,24 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
 
 <!-- BLOG-POSTS:START -->
 <a href="https://jmrp.io/blog/012-device-bound-key-derivation/">
-  <img src="generated/blog-1-dark.svg#gh-dark-mode-only" width="100%" alt="Your 4-Digit PIN Is Fine: Device-Bound Keys on ESP32-S3"/>
-  <img src="generated/blog-1-light.svg#gh-light-mode-only" width="100%" alt="Your 4-Digit PIN Is Fine: Device-Bound Keys on ESP32-S3"/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="generated/blog-1-dark.svg"/>
+    <img src="generated/blog-1-light.svg" width="100%" alt="Your 4-Digit PIN Is Fine: Device-Bound Keys on ESP32-S3"/>
+  </picture>
 </a>
 
 <a href="https://jmrp.io/blog/011-encrypt-then-mac-vault/">
-  <img src="generated/blog-2-dark.svg#gh-dark-mode-only" width="100%" alt="A Vault File That Fails Closed: Encrypt-then-MAC on an MCU"/>
-  <img src="generated/blog-2-light.svg#gh-light-mode-only" width="100%" alt="A Vault File That Fails Closed: Encrypt-then-MAC on an MCU"/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="generated/blog-2-dark.svg"/>
+    <img src="generated/blog-2-light.svg" width="100%" alt="A Vault File That Fails Closed: Encrypt-then-MAC on an MCU"/>
+  </picture>
 </a>
 
 <a href="https://jmrp.io/blog/010-packed-i18n-string-pool/">
-  <img src="generated/blog-3-dark.svg#gh-dark-mode-only" width="100%" alt="What the Linker Won't Do: Packing i18n Strings on an MCU"/>
-  <img src="generated/blog-3-light.svg#gh-light-mode-only" width="100%" alt="What the Linker Won't Do: Packing i18n Strings on an MCU"/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="generated/blog-3-dark.svg"/>
+    <img src="generated/blog-3-light.svg" width="100%" alt="What the Linker Won't Do: Packing i18n Strings on an MCU"/>
+  </picture>
 </a>
 
 <p align="center">

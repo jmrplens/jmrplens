@@ -9,11 +9,12 @@ POSTS = [
 
 def test_build_block_has_one_card_per_post_clickable():
     block = build_blog_block(POSTS)
-    # Una tarjeta clicable por post, con par dark/light dentro del enlace
+    # Una tarjeta clicable por post, con <picture> dark/light dentro del enlace
     assert block.count('<a href="https://jmrp.io/blog/1/">') == 1
-    assert "generated/blog-1-dark.svg#gh-dark-mode-only" in block
-    assert "generated/blog-1-light.svg#gh-light-mode-only" in block
-    assert "generated/blog-2-dark.svg#gh-dark-mode-only" in block
+    assert block.count("<picture>") == len(POSTS)
+    assert '<source media="(prefers-color-scheme: dark)" srcset="generated/blog-1-dark.svg"/>' in block
+    assert 'src="generated/blog-1-light.svg"' in block
+    assert '<source media="(prefers-color-scheme: dark)" srcset="generated/blog-2-dark.svg"/>' in block
     # El badge "Read all posts" se mantiene
     assert "jmrp.io/blog" in block
 

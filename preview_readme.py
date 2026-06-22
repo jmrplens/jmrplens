@@ -20,10 +20,13 @@ def render():
     )
     resp.raise_for_status()
     body = resp.text
-    # Resolver rutas relativas y forzar la variante dark (el preview es dark)
+    # Resolver rutas relativas (src e srcset de <picture>).
     body = body.replace('src="generated/', 'src="../generated/')
-    body = re.sub(r'<img[^>]*src="\.\./generated/[^"]+-light\.svg[^"]*"[^>]*>', "", body)
-    # Eliminar el fragmento #gh-dark-mode-only para que el navegador muestre el SVG
+    body = body.replace('srcset="generated/', 'srcset="../generated/')
+    # El panel de stats usa <img ...#gh-*-mode-only> (CSS solo de GitHub, que el
+    # navegador no aplica): deja la variante dark y elimina la light + el fragmento.
+    # El blog usa <picture>, que sí responde a prefers-color-scheme (emular dark).
+    body = re.sub(r'<img[^>]*-light\.svg#gh-light-mode-only[^>]*>', "", body)
     body = body.replace("-dark.svg#gh-dark-mode-only", "-dark.svg")
     os.makedirs("preview", exist_ok=True)
     html = (
