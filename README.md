@@ -1,4 +1,4 @@
-Multidisciplinary **R&D Engineer** with a deep passion for the intersection of hardware and software. Currently working at **Power Electronics**, I specialize in **Embedded Systems**, **Acoustics**, and **Industrial Software Development**. My journey has been defined by a constant drive to learn and adapt, moving from fundamental acoustic research to building robust industrial systems.
+**Firmware & Software Engineer** with a **research** background. I moved from acoustics research — metamaterials, simulation and measurement — into designing embedded systems and the software around them: bare-metal MCUs, C, industrial communications and on-hardware testing.
 
 <div align="center">
   <img src="generated/tech-stack-dark.svg#gh-dark-mode-only" alt="Tech Stack" width="100%"/>
