@@ -1,6 +1,5 @@
 """Obtención de datos: GraphQL (stats) y RSS (blog)."""
 import xml.etree.ElementTree as ET
-from datetime import datetime
 from email.utils import parsedate_to_datetime
 
 import requests

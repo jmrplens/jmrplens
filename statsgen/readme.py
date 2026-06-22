@@ -26,8 +26,9 @@ def build_blog_block(posts):
     cards = []
     for i, post in enumerate(posts, start=1):
         alt = _esc(post["title"])
+        href = _esc(post["link"])
         cards.append(
-            f'<a href="{post["link"]}">\n'
+            f'<a href="{href}">\n'
             f'  <img src="generated/blog-{i}-dark.svg#gh-dark-mode-only" width="100%" alt="{alt}"/>\n'
             f'  <img src="generated/blog-{i}-light.svg#gh-light-mode-only" width="100%" alt="{alt}"/>\n'
             f"</a>"
