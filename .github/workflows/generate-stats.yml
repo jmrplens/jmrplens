@@ -30,15 +30,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       
-      - name: Generate stats SVGs and update blog posts
+      - name: Generate stats SVGs and blog cards
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # GH_STATS_TOKEN (fine-grained PAT) incluye repos privados en los
+          # lenguajes; si no existe, cae al GITHUB_TOKEN (solo público).
+          STATS_TOKEN: ${{ secrets.GH_STATS_TOKEN || secrets.GITHUB_TOKEN }}
         run: python generate_stats.py
-      
+
       - name: Commit and push if changed
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add generated/github-stats-*.svg README.md
+          git add generated/*.svg README.md
           git diff --quiet && git diff --staged --quiet || git commit -m "📊 Update GitHub stats & blog posts"
           git push
