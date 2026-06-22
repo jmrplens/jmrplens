@@ -1,15 +1,9 @@
-## 👋 About Me
-
 Multidisciplinary **R&D Engineer** with a deep passion for the intersection of hardware and software. Currently working at **Power Electronics**, I specialize in **Embedded Systems**, **Acoustics**, and **Industrial Software Development**. My journey has been defined by a constant drive to learn and adapt, moving from fundamental acoustic research to building robust industrial systems.
-
-## 🛠️ Tech Stack
 
 <div align="center">
   <img src="generated/tech-stack-dark.svg#gh-dark-mode-only" alt="Tech Stack" width="100%"/>
   <img src="generated/tech-stack-light.svg#gh-light-mode-only" alt="Tech Stack" width="100%"/>
 </div>
-
-## 📝 Latest Blog Posts
 
 <!-- BLOG-POSTS:START -->
 <a href="https://jmrp.io/blog/012-device-bound-key-derivation/">
@@ -32,12 +26,6 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
     <img src="generated/blog-3-light.svg" width="100%" alt="What the Linker Won't Do: Packing i18n Strings on an MCU"/>
   </picture>
 </a>
-
-<p align="center">
-  <a href="https://jmrp.io/blog">
-    <img src="https://img.shields.io/badge/📚_Read_all_posts-0969da?style=for-the-badge" alt="Read all posts"/>
-  </a>
-</p>
 <!-- BLOG-POSTS:END -->
 
 <div align="center">
@@ -45,18 +33,12 @@ Multidisciplinary **R&D Engineer** with a deep passion for the intersection of h
   <img src="generated/github-stats-light.svg#gh-light-mode-only" alt="GitHub Statistics" width="100%"/>
 </div>
 
-## 🔗 Connect With Me
-
 <p align="center">
-  <a href="https://jmrp.io">
-    <img src="https://img.shields.io/badge/-Website-0969da?style=flat-square&logo=googlechrome&logoColor=white" alt="Website"/>
-  </a>
-  <a href="https://www.linkedin.com/in/jmrplens/">
-    <img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-  </a>
-  <a href="https://mstdn.jmrp.io/@jmrplens">
-    <img src="https://img.shields.io/badge/-Mastodon-6364FF?style=flat-square&logo=mastodon&logoColor=white" alt="Mastodon"/>
-  </a>
+  <a href="https://jmrp.io"><picture><source media="(prefers-color-scheme: dark)" srcset="generated/connect-website-dark.svg"/><img src="generated/connect-website-light.svg" height="34" alt="Website"/></picture></a>
+  &nbsp;
+  <a href="https://www.linkedin.com/in/jmrplens/"><picture><source media="(prefers-color-scheme: dark)" srcset="generated/connect-linkedin-dark.svg"/><img src="generated/connect-linkedin-light.svg" height="34" alt="LinkedIn"/></picture></a>
+  &nbsp;
+  <a href="https://mstdn.jmrp.io/@jmrplens"><picture><source media="(prefers-color-scheme: dark)" srcset="generated/connect-mastodon-dark.svg"/><img src="generated/connect-mastodon-light.svg" height="34" alt="Mastodon"/></picture></a>
 </p>
 
 <p align="center">

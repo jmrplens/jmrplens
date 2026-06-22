@@ -7,6 +7,7 @@ from statsgen.transform import normalize_languages, languages_to_percentages
 from statsgen.render_stats import render_stats_svg
 from statsgen.render_blog import render_blog_card_svg
 from statsgen.render_techstack import render_techstack_svg
+from statsgen.render_connect import render_connect_chip_svg, slug, LINKS
 from statsgen.readme import update_readme_blog
 
 NUM_POSTS = 3
@@ -38,7 +39,10 @@ def main(token, outdir="generated", readme_path="README.md"):
                render_stats_svg(lang_pcts, activity, theme))
         _write(os.path.join(outdir, f"tech-stack-{theme}.svg"),
                render_techstack_svg(theme))
-    print("✅ Panel de estadísticas y Tech Stack generados (dark + light)")
+        for label, _url, spec in LINKS:
+            _write(os.path.join(outdir, f"connect-{slug(label)}-{theme}.svg"),
+                   render_connect_chip_svg(label, spec, theme))
+    print("✅ Panel de estadísticas, Tech Stack y Connect generados (dark + light)")
 
     print("Obteniendo posts del blog...")
     posts = fetch_blog_posts(num_posts=NUM_POSTS)
