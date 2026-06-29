@@ -8,6 +8,13 @@ on:
     - cron: '0 0,12 * * *'
   workflow_dispatch:
 
+# Prevent overlapping runs. The 12h cron plus a slow run can race two
+# `git push` operations against the same checkout, causing one to fail
+# or to clobber the other's commit.
+concurrency:
+  group: stats-${{ github.ref }}
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
