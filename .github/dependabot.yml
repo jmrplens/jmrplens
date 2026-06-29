@@ -33,12 +33,6 @@ updates:
         applies-to: version-updates
         update-types:
           - "major"
-    ignore:
-      # pytest 9.x introduce cambios incompatibles: déjalo en manual hasta
-      # haber verificado la suite.
-      - dependency-name: "pytest"
-        versions:
-          - "9.x"
 
   - package-ecosystem: "github-actions"
     directory: "/"
