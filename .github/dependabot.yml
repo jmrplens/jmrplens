@@ -1,0 +1,68 @@
+version: 2
+
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      # Las PRs se revisarán L-V a las 09:00 UTC; los checkouts fuera de
+      # horario hábil se aplazan al siguiente slot, pero el escaneo sigue
+      # siendo diario para detectar nuevas versiones enseguida.
+      time: "09:00"
+      timezone: "Europe/Madrid"
+      day: "monday-friday"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "python"
+    assignees:
+      - "jmrplens"
+    commit-message:
+      prefix: "chore(deps)"
+      prefix-development: "chore(deps-dev)"
+      include: "scope"
+    groups:
+      # Agrupa minor + patch en una sola PR para reducir ruido.
+      python-minor-and-patch:
+        applies-to: version-updates
+        update-types:
+          - "minor"
+          - "patch"
+      # Major updates van siempre solas para revisarlas con calma.
+      python-major:
+        applies-to: version-updates
+        update-types:
+          - "major"
+    ignore:
+      # pytest 9.x introduce cambios incompatibles: déjalo en manual hasta
+      # haber verificado la suite.
+      - dependency-name: "pytest"
+        versions:
+          - "9.x"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "09:00"
+      timezone: "Europe/Madrid"
+      day: "monday-friday"
+    open-pull-requests-limit: 3
+    labels:
+      - "dependencies"
+      - "github-actions"
+    assignees:
+      - "jmrplens"
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+    groups:
+      actions-minor-and-patch:
+        applies-to: version-updates
+        update-types:
+          - "minor"
+          - "patch"
+      actions-major:
+        applies-to: version-updates
+        update-types:
+          - "major"
