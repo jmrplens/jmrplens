@@ -6,6 +6,7 @@ README y que sea clicable. Tamaño fijo: en móvil no se encogen a ilegible.
 """
 import os
 import re
+from pathlib import Path
 
 from statsgen.theme import THEMES, FONT_SANS, FONT_MONO
 
@@ -54,7 +55,7 @@ def _mono_asset(rel, color):
     path = f"assets/icons/{rel}.svg"
     if not os.path.exists(path):
         return f'<rect width="{ICON}" height="{ICON}" rx="3" fill="{color}"/>'
-    content = open(path, encoding="utf-8").read()
+    content = Path(path).read_text(encoding="utf-8")
     vbm = re.search(r'viewBox="([^"]+)"', content)
     vb = vbm.group(1) if vbm else "0 0 24 24"
     wm = re.search(r'<svg[^>]*\bwidth="(\d+)"', content)

@@ -6,6 +6,7 @@ curado (no viene de la API); vive aquí.
 """
 import os
 import re
+from pathlib import Path
 
 from statsgen.theme import THEMES, FONT_SANS
 
@@ -50,7 +51,7 @@ def _icon_svg(rel, color):
     path = f"assets/icons/{rel}.svg"
     if not os.path.exists(path):
         return f'<circle cx="{ICON/2}" cy="{ICON/2}" r="{ICON/2}" fill="{color}"/>'
-    content = open(path, encoding="utf-8").read()
+    content = Path(path).read_text(encoding="utf-8")
     vbm = re.search(r'viewBox="([^"]+)"', content)
     vb = vbm.group(1) if vbm else "0 0 24 24"
     wm = re.search(r'<svg[^>]*\bwidth="(\d+)"', content)
