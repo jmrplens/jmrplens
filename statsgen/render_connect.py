@@ -90,25 +90,5 @@ def render_connect_chip_svg(label, spec, theme):
 </svg>'''
 
 
-def render_views_chip_svg(count, theme):
-    """Chip nativo (no clicable) con el contador de visitas de perfil."""
-    t = THEMES[theme]
-    num = f"{count:,}"
-    label = "Profile views"
-    text_w = int(len(label) * 7.0) + 10 + int(len(num) * 8.2)
-    width = 14 + ICON + 8 + text_w + 14
-    num_x = 14 + ICON + 8 + int(len(label) * 7.0) + 10
-    return f'''<svg width="{width}" height="{H}" viewBox="0 0 {width} {H}" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .v-label {{ font: 400 13px {FONT_SANS}; fill: {t['muted']}; }}
-    .v-num {{ font: 600 13px {FONT_MONO}; fill: {t['fg']}; }}
-  </style>
-  <rect x="0.5" y="0.5" width="{width - 1}" height="{H - 1}" rx="6" fill="{t['bg_muted']}" stroke="{t['border']}"/>
-  <g transform="translate(14, {(H - ICON) // 2})"><svg width="{ICON}" height="{ICON}" viewBox="0 0 16 16" fill="{t['accent']}">{_EYE}</svg></g>
-  <text class="v-label" x="{14 + ICON + 8}" y="23">{label}</text>
-  <text class="v-num" x="{num_x}" y="23">{num}</text>
-</svg>'''
-
-
 def slug(label):
     return label.lower()

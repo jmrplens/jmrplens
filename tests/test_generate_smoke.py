@@ -18,7 +18,6 @@ def test_main_writes_all_svgs_and_updates_readme(tmp_path, monkeypatch):
     monkeypatch.setattr(generate_stats, "fetch_blog_posts", lambda num_posts=3: posts)
     monkeypatch.setattr(generate_stats, "fetch_traffic",
                         lambda tok, names: {"views_14d": 1061, "clones_14d": 24979})
-    monkeypatch.setattr(generate_stats, "fetch_profile_views", lambda: 1234)
     monkeypatch.setattr(generate_stats, "fetch_og_image", lambda url: None)
     monkeypatch.setattr(generate_stats, "make_cover_data_uri", lambda *a, **k: None)
 
@@ -29,7 +28,7 @@ def test_main_writes_all_svgs_and_updates_readme(tmp_path, monkeypatch):
     generate_stats.main(token="tok", outdir=str(outdir), readme_path=str(readme))
 
     for name in ["github-stats-dark.svg", "github-stats-light.svg",
-                 "tech-stack-dark.svg", "views-dark.svg", "connect-website-dark.svg",
+                 "tech-stack-dark.svg", "connect-website-dark.svg",
                  "blog-1-dark.svg", "blog-3-light.svg"]:
         assert (outdir / name).exists()
     assert "OLD" not in readme.read_text()

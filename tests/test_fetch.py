@@ -96,14 +96,6 @@ def test_fetch_traffic_skips_inaccessible_repos(monkeypatch):
     assert fetch.fetch_traffic("tok", ["a/x"]) == {"views_14d": 0, "clones_14d": 0}
 
 
-def test_fetch_profile_views_parses_count(monkeypatch):
-    class FakeResp:
-        text = '<svg><text>views</text><text x="10">1,234</text></svg>'
-        def raise_for_status(self): pass
-    monkeypatch.setattr(fetch.requests, "get", lambda *a, **k: FakeResp())
-    assert fetch.fetch_profile_views() == 1234
-
-
 def test_fetch_og_image_extracts_url(monkeypatch):
     html = '<head><meta content="https://x/cover.webp" property="og:image"></head>'
     class FakeResp:

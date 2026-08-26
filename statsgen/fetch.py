@@ -68,23 +68,6 @@ def fetch_stats(token):
     return activity, language_repos
 
 
-def fetch_profile_views():
-    """Lee el contador de visitas de perfil de komarev (badge SVG) y extrae el
-    número. Devuelve int, o None si falla."""
-    try:
-        r = requests.get(
-            "https://komarev.com/ghpvc/?username=jmrplens&base=0",
-            timeout=20,
-        )
-        r.raise_for_status()
-        nums = re.findall(r">([0-9][0-9,]*)</text>", r.text)
-        if nums:
-            return int(nums[-1].replace(",", ""))
-    except requests.RequestException:
-        pass
-    return None
-
-
 def fetch_og_image(url):
     """Devuelve la URL de la imagen de portada (og:image / twitter:image) de una
     página, o None."""

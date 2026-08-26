@@ -40,8 +40,3 @@
   &nbsp;
   <a href="https://mstdn.jmrp.io/@jmrplens"><picture><source media="(prefers-color-scheme: dark)" srcset="generated/connect-mastodon-dark.svg"/><img src="generated/connect-mastodon-light.svg" height="34" alt="Mastodon"/></picture></a>
 </p>
-
-<p align="center">
-  <img src="generated/views-dark.svg#gh-dark-mode-only" alt="Profile views"/>
-  <img src="generated/views-light.svg#gh-light-mode-only" alt="Profile views"/>
-</p>
