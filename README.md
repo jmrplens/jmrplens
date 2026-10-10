@@ -6,24 +6,24 @@
 </div>
 
 <!-- BLOG-POSTS:START -->
-<a href="https://jmrp.io/blog/012-device-bound-key-derivation/">
+<a href="https://jmrp.io/blog/013-gitlab-mcp-server-api-lessons/">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="generated/blog-1-dark.svg"/>
-    <img src="generated/blog-1-light.svg" width="100%" alt="Your 4-Digit PIN Is Fine: Device-Bound Keys on ESP32-S3"/>
+    <img src="generated/blog-1-light.svg" width="100%" alt="What building a GitLab MCP server taught me about GitLab's API"/>
   </picture>
 </a>
 
-<a href="https://jmrp.io/blog/011-encrypt-then-mac-vault/">
+<a href="https://jmrp.io/blog/014-gitlab-fine-grained-tokens-per-action/">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="generated/blog-2-dark.svg"/>
-    <img src="generated/blog-2-light.svg" width="100%" alt="A Vault File That Fails Closed: Encrypt-then-MAC on an MCU"/>
+    <img src="generated/blog-2-light.svg" width="100%" alt="GitLab fine-grained personal access tokens, one action at a time"/>
   </picture>
 </a>
 
-<a href="https://jmrp.io/blog/010-packed-i18n-string-pool/">
+<a href="https://jmrp.io/blog/012-device-bound-key-derivation/">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="generated/blog-3-dark.svg"/>
-    <img src="generated/blog-3-light.svg" width="100%" alt="What the Linker Won't Do: Packing i18n Strings on an MCU"/>
+    <img src="generated/blog-3-light.svg" width="100%" alt="Your 4-Digit PIN Is Fine: Device-Bound Keys on ESP32-S3"/>
   </picture>
 </a>
 <!-- BLOG-POSTS:END -->
