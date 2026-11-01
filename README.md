@@ -1,5 +1,7 @@
 **Firmware & Software Engineer** with a **research** background. I moved from acoustics research — metamaterials, simulation and measurement — into designing embedded systems and the software around them: bare-metal MCUs, C, industrial communications and on-hardware testing.
 
+Right now I am building [**Kleidos**](https://kleidos.dev/), a hardware password manager for nine ESP32 boards: your passwords stay encrypted on a small device you carry, and it types them over Bluetooth only after you unlock it on the device itself. In development, not released yet.
+
 <div align="center">
   <img src="generated/tech-stack-dark.svg#gh-dark-mode-only" alt="Tech Stack" width="100%"/>
   <img src="generated/tech-stack-light.svg#gh-light-mode-only" alt="Tech Stack" width="100%"/>
